@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header nav {
+    background-color: #333;
+    padding: 10px;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+    /*scroll-margin-top: 100px; !* Высота вашего header *!*/
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.rounded-circle {
+    border-radius: 50%;
+}
+
+.bg-dark {
+    background-color: #333;
+}
+
+.text-white {
+    color: #fff;
+}
+
+.text-center {
+    text-align: center;
+}
+
+footer {
+    padding: 10px;
+    text-align: center;
+}
+
+/* Плавная прокрутка */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Для браузеров, которые не поддерживают scroll-behavior */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мои сертификаты | Портфолио веб-разработчика</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="local%3Ftemplates/mnain/dist/css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Шапка с меню (аналогичная index.html) -->
+    <header class="header">
+        <!-- ... -->
+    </header>
+
+    <main class="certificates-page">
+        <div class="container">
+            <h1 class="page-title">Мои сертификаты</h1>
+            
+            <div class="certificate-categories">
+                <button class="category-btn active" data-category="all">Все</button>
+                <button class="category-btn" data-category="web">Веб-разработка</button>
+                <button class="category-btn" data-category="linux">Linux</button>
+                <button class="category-btn" data-category="js">JavaScript</button>
+                <button class="category-btn" data-category="security">Безопасность</button>
+            </div>
+            
+            <div class="all-certificates">
+                <h2 class="category-title" id="web-certs">Веб-разработка</h2>
+                <div class="certificates-grid">
+                    <div class="certificate-card" data-category="web">
+                        <img src="images/cert1.jpg" alt="Сертификат по веб-разработке">
+                        <div class="certificate-overlay">
+                            <h3>Advanced Web Development</h3>
+                            <p>2023 | Udemy</p>
+                        </div>
+                    </div>
+                    <!-- Еще сертификаты по веб-разработке -->
+                </div>
+                
+                <h2 class="category-title" id="linux-certs">Linux</h2>
+                <div class="certificates-grid">
+                    <div class="certificate-card" data-category="linux">
+                        <img src="images/cert2.jpg" alt="Сертификат по Linux">
+                        <div class="certificate-overlay">
+                            <h3>LPIC-1 Certified</h3>
+                            <p>2022 | Linux Professional Institute</p>
+                        </div>
+                    </div>
+                    <!-- Еще сертификаты по Linux -->
+                </div>
+                
+                <h2 class="category-title" id="js-certs">JavaScript</h2>
+                <div class="certificates-grid">
+                    <div class="certificate-card" data-category="js">
+                        <img src="images/cert3.jpg" alt="Сертификат по JavaScript">
+                        <div class="certificate-overlay">
+                            <h3>Advanced JavaScript</h3>
+                            <p>2021 | Coursera</p>
+                        </div>
+                    </div>
+                    <!-- Еще сертификаты по JavaScript -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Подвал (аналогичный index.html) -->
+    <footer class="footer">
+        <!-- ... -->
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="local%3Ftemplates/mnain/dist/js/certificates-filter.js"></script>
+</body>
+</html>

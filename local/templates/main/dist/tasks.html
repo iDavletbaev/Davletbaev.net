@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Типовые задачи | Портфолио веб-разработчика</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="local%3Ftemplates/mnain/dist/css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Шапка с меню (аналогичная index.html) -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">Ivan<span>Dev</span></a>
+                <nav class="navbar">
+                    <a href="#" class="logo">Ivan<span>Dev</span></a>
+                    <ul class="nav-menu">
+                        <li class="nav-item"><a href="/#about" class="nav-link">Обо мне</a></li>
+                        <li class="nav-item"><a href="/#skills" class="nav-link">Навыки</a></li>
+                        <li class="nav-item"><a href="/#certificates" class="nav-link">Сертификаты</a></li>
+                        <li class="nav-item"><a href="/#tasks" class="nav-link">Услуги</a></li>
+                        <li class="nav-item"><a href="/#contact" class="nav-link">Контакты</a></li>
+                    </ul>
+                    <div class="hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </nav>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="tasks-page">
+        <div class="container">
+            <h1 class="page-title">Типовые задачи</h1>
+            
+            <div class="tasks-grid">
+                <div class="task-card" data-task="1">
+                    <div class="task-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Разработка сайтов</h3>
+                    <p>Создание корпоративных сайтов, лендингов и интернет-магазинов.</p>
+                    <button class="task-more">Подробнее</button>
+                </div>
+                
+                <div class="task-card" data-task="2">
+                    <div class="task-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>Настройка серверов</h3>
+                    <p>Развертывание и оптимизация веб-серверов (Nginx, Apache).</p>
+                    <button class="task-more">Подробнее</button>
+                </div>
+                
+                <div class="task-card" data-task="3">
+                    <div class="task-icon">
+                        <i class="fas fa-bug"></i>
+                    </div>
+                    <h3>Исправление ошибок</h3>
+                    <p>Диагностика и устранение проблем в существующих проектах.</p>
+                    <button class="task-more">Подробнее</button>
+                </div>
+                
+                <!-- Еще задачи -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Подвал (аналогичный index.html) -->
+    <footer class="footer">
+        <!-- ... -->
+    </footer>
+
+    <!-- Модальное окно для задач -->
+    <div id="task-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 id="task-modal-title"></h2>
+            <div id="task-modal-body"></div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="local%3Ftemplates/mnain/dist/js/tasks-modal.js"></script>
+</body>
+</html>

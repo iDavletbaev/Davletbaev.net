@@ -1,0 +1,6 @@
+/bitrix/*
+/upload/*
+.htaccess
+/local/logs/*
+/local/vendor/*
+/local/composer.lock

@@ -1,5 +1,7 @@
 /bitrix/*
 /upload/*
+.idea/*
+.DS_Store
 .htaccess
 /local/logs/*
 /local/vendor/*

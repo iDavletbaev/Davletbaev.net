@@ -162,11 +162,13 @@ section {
 }
 
 /* Герой секция */
+/* Hero Section */
 .hero {
     padding: 180px 0 100px;
     background: linear-gradient(135deg, rgba(26, 32, 44, 0.9) 0%, rgba(42, 50, 70, 0.9) 100%),
     url('../images/background-pattern.png');
     background-size: cover;
+    overflow: hidden;
 }
 
 .hero-content {
@@ -178,6 +180,134 @@ section {
 
 .hero-text {
     flex: 1;
+    max-width: 600px;
+}
+
+/* Стили для фото */
+.photo-container {
+    position: relative;
+    width: 380px;
+    height: 380px;
+    margin-right: 40px;
+    margin-top: 40px;
+}
+
+.photo-frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--primary-color);
+    border-radius: 65% 35% 70% 30% / 40% 60% 40% 60%;
+    transform: rotate(5deg);
+    z-index: 1;
+    box-shadow: 0 20px 30px rgba(108, 99, 255, 0.3);
+}
+
+.profile-img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 60% 40% 60% 40% / 50% 50% 50% 50%;
+    transform: rotate(-5deg) scale(1.1);
+    /*clip-path: polygon(
+        0 0,
+        100% 0,
+        100% 80%,
+        50% 100%,
+        0 100%
+    );*/
+    margin-left: -25px;
+    margin-top: -25px;
+    z-index: 2;
+    transition: all 0.5s ease;
+    filter: grayscale(20%) contrast(110%);
+}
+
+.photo-container:hover .profile-img {
+    transform: rotate(-3deg) scale(1.05) translateY(-10px);
+    filter: grayscale(0%) contrast(100%);
+}
+
+.photo-container::before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    right: -15px;
+    bottom: -15px;
+    background: linear-gradient(45deg,
+    var(--primary-color),
+    var(--primary-dark));
+    border-radius: 65% 35% 70% 30% / 40% 60% 40% 60%;
+    z-index: 0;
+    animation: rotateGradient 15s infinite linear;
+    opacity: 0.7;
+}
+
+/* Анимация градиента */
+@keyframes rotateGradient {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Технологии */
+.tech-icons {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-5deg);
+    display: flex;
+    gap: 15px;
+    background-color: var(--secondary-color);
+    padding: 15px 25px;
+    border-radius: 50px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    z-index: 3;
+}
+
+.tech-icons i {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    transition: transform 0.3s;
+}
+
+.tech-icons i:hover {
+    transform: scale(1.2);
+}
+
+/* Адаптивность */
+@media (max-width: 992px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .photo-container {
+        margin: 40px auto 0;
+    }
+
+    .hero-text {
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 576px) {
+    .photo-container {
+        width: 280px;
+        height: 280px;
+    }
+
+    .profile-img {
+        margin-left: -15px;
+        margin-top: -15px;
+    }
 }
 
 .title {
@@ -260,7 +390,7 @@ section {
     height: 350px;
     border-radius: 20px;
     object-fit: cover;
-    border: 5px solid var(--primary-color);
+    /*border: 5px solid var(--primary-color);*/
     box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
 }
 
@@ -336,7 +466,7 @@ section {
     margin-bottom: 50px;
 }
 
-.certificate-card {
+.certificate-mp-card {
     position: relative;
     border-radius: 10px;
     overflow: hidden;
@@ -344,18 +474,18 @@ section {
     transition: transform 0.3s;
 }
 
-.certificate-card img {
+.certificate-mp-card img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s;
 }
 
-.certificate-card:hover {
+.certificate-mp-card:hover {
     transform: translateY(-10px);
 }
 
-.certificate-card:hover img {
+.certificate-mp-card:hover img {
     transform: scale(1.1);
 }
 
@@ -610,7 +740,7 @@ section {
     margin: 2% auto;
     padding: 30px;
     border-radius: 10px;
-    max-width: 800px;
+    /*max-width: 800px;*/
     width: 95%;
     position: relative;
     animation: modalFadeIn 0.3s ease-out;

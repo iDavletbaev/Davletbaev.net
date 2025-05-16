@@ -3,75 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мои сертификаты | Портфолио веб-разработчика</title>
+    <title>Сертификаты | Портфолио веб-разработчика</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="local%3Ftemplates/mnain/dist/css/animations.css">
+    <link rel="stylesheet" href="css/certificates.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Шапка с меню (аналогичная index.html) -->
-    <header class="header">
-        <!-- ... -->
-    </header>
+<!-- Шапка с меню -->
+<header class="header">
+    <div class="container">
+        <nav class="navbar">
+            <a href="index.html" class="logo">Ivan<span>Dev</span></a>
 
-    <main class="certificates-page">
-        <div class="container">
-            <h1 class="page-title">Мои сертификаты</h1>
-            
-            <div class="certificate-categories">
-                <button class="category-btn active" data-category="all">Все</button>
-                <button class="category-btn" data-category="web">Веб-разработка</button>
-                <button class="category-btn" data-category="linux">Linux</button>
-                <button class="category-btn" data-category="js">JavaScript</button>
-                <button class="category-btn" data-category="security">Безопасность</button>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
-            
-            <div class="all-certificates">
-                <h2 class="category-title" id="web-certs">Веб-разработка</h2>
+
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html#about" class="nav-link">Обо мне</a></li>
+                <li class="nav-item"><a href="index.html#skills" class="nav-link">Навыки</a></li>
+                <li class="nav-item"><a href="certificates.html" class="nav-link active">Сертификаты</a></li>
+                <li class="nav-item"><a href="tasks.html" class="nav-link">Услуги</a></li>
+                <li class="nav-item"><a href="blog.html" class="nav-link">Блог</a></li>
+                <li class="nav-item"><a href="index.html#contact" class="nav-link">Контакты</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="page-content">
+    <div class="container">
+        <div class="page-header">
+            <h1 class="page-title">Мои сертификаты</h1>
+            <p class="page-subtitle">Подтвержденные знания и пройденные курсы</p>
+        </div>
+
+        <div class="content-grid">
+            <div class="filter-sidebar">
+                <h3 class="filter-title">Фильтровать по категориям</h3>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">Все</button>
+                    <button class="filter-btn" data-filter="web">Веб-разработка</button>
+                    <button class="filter-btn" data-filter="linux">Linux</button>
+                    <button class="filter-btn" data-filter="js">JavaScript</button>
+                    <button class="filter-btn" data-filter="security">Безопасность</button>
+                </div>
+            </div>
+
+            <div class="certificates-container">
                 <div class="certificates-grid">
+                    <!-- Сертификат 1 -->
                     <div class="certificate-card" data-category="web">
-                        <img src="images/cert1.jpg" alt="Сертификат по веб-разработке">
-                        <div class="certificate-overlay">
+                        <div class="certificate-image">
+                            <img src="images/cert1.jpg" alt="Сертификат по веб-разработке">
+                            <div class="certificate-overlay">
+                                <button class="view-btn" data-cert-id="1">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="certificate-info">
                             <h3>Advanced Web Development</h3>
-                            <p>2023 | Udemy</p>
+                            <div class="certificate-meta">
+                                <span class="cert-date"><i class="far fa-calendar"></i> 2023</span>
+                                <span class="cert-issuer"><i class="fas fa-award"></i> Udemy</span>
+                            </div>
                         </div>
                     </div>
-                    <!-- Еще сертификаты по веб-разработке -->
-                </div>
-                
-                <h2 class="category-title" id="linux-certs">Linux</h2>
-                <div class="certificates-grid">
+
+                    <!-- Сертификат 2 -->
                     <div class="certificate-card" data-category="linux">
-                        <img src="images/cert2.jpg" alt="Сертификат по Linux">
-                        <div class="certificate-overlay">
+                        <div class="certificate-image">
+                            <img src="images/cert2.jpg" alt="Сертификат по Linux">
+                            <div class="certificate-overlay">
+                                <button class="view-btn" data-cert-id="2">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="certificate-info">
                             <h3>LPIC-1 Certified</h3>
-                            <p>2022 | Linux Professional Institute</p>
+                            <div class="certificate-meta">
+                                <span class="cert-date"><i class="far fa-calendar"></i> 2022</span>
+                                <span class="cert-issuer"><i class="fas fa-award"></i> Linux Institute</span>
+                            </div>
                         </div>
                     </div>
-                    <!-- Еще сертификаты по Linux -->
+
+                    <!-- Дополнительные сертификаты -->
                 </div>
-                
-                <h2 class="category-title" id="js-certs">JavaScript</h2>
-                <div class="certificates-grid">
-                    <div class="certificate-card" data-category="js">
-                        <img src="images/cert3.jpg" alt="Сертификат по JavaScript">
-                        <div class="certificate-overlay">
-                            <h3>Advanced JavaScript</h3>
-                            <p>2021 | Coursera</p>
-                        </div>
-                    </div>
-                    <!-- Еще сертификаты по JavaScript -->
+
+                <div class="pagination">
+                    <a href="#" class="pagination-btn active">1</a>
+                    <a href="#" class="pagination-btn">2</a>
+                    <a href="#" class="pagination-btn">3</a>
+                    <a href="#" class="pagination-btn next">Следующая <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
-    </main>
+    </div>
+</main>
 
-    <!-- Подвал (аналогичный index.html) -->
-    <footer class="footer">
-        <!-- ... -->
-    </footer>
+<!-- Подвал -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <a href="index.html" class="logo">Ivan<span>Dev</span></a>
+                <p>Веб-разработчик & Linux администратор</p>
+            </div>
+            <div class="footer-links">
+                <h3>Быстрые ссылки</h3>
+                <ul>
+                    <li><a href="index.html#about">Обо мне</a></li>
+                    <li><a href="index.html#skills">Навыки</a></li>
+                    <li><a href="certificates.html">Сертификаты</a></li>
+                    <li><a href="tasks.html">Услуги</a></li>
+                    <li><a href="blog.html">Блог</a></li>
+                    <li><a href="index.html#contact">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Контакты</h3>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> ivan@example.com</li>
+                    <li><i class="fas fa-phone"></i> +7 (123) 456-78-90</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Иван Иванов. Все права защищены.</p>
+        </div>
+    </div>
+</footer>
 
-    <script src="js/main.js"></script>
-    <script src="local%3Ftemplates/mnain/dist/js/certificates-filter.js"></script>
+<!-- Кнопка "Наверх" -->
+<button id="back-to-top" aria-label="Вернуться к началу страницы">
+    <svg id="progress-circle" width="60" height="60" viewBox="0 0 60 60">
+        <circle class="bg" cx="30" cy="30" r="28" />
+        <circle class="progress" cx="30" cy="30" r="28" />
+    </svg>
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- Модальное окно для сертификатов -->
+<div id="certificate-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div class="modal-certificate">
+            <img id="modal-cert-image" src="" alt="Просмотр сертификата">
+            <div class="certificate-details">
+                <h3 id="modal-cert-title"></h3>
+                <div class="cert-meta">
+                    <span id="modal-cert-date"></span>
+                    <span id="modal-cert-issuer"></span>
+                </div>
+                <a href="#" class="btn" id="download-cert">Скачать сертификат</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/main.js"></script>
+<script src="js/certificates.js"></script>
 </body>
 </html>

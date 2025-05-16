@@ -363,18 +363,63 @@
     .blog-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .article-title {
         font-size: 1.8rem;
     }
-    
+
     .article-content h2 {
         font-size: 1.5rem;
     }
-    
+
     .article-meta {
         flex-direction: column;
         align-items: center;
         gap: 10px;
     }
+}
+
+/* Анимации фильтрации */
+.blog-card {
+    transition: all 0.3s ease;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.blog-card.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    height: 0;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    border: none;
+}
+
+/* Кнопки категорий */
+.blog-categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+    justify-content: center;
+}
+
+.category-btn {
+    padding: 8px 20px;
+    border-radius: 20px;
+    background: var(--dark-color);
+    color: var(--light-color);
+    border: 1px solid var(--dark-gray);
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+}
+
+.category-btn:hover,
+.category-btn.active {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
 }

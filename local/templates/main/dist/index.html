@@ -23,11 +23,12 @@
 
             <!-- Меню -->
             <ul class="nav-menu">
-                <li class="nav-item"><a href="#about" class="nav-link">Обо мне</a></li>
-                <li class="nav-item"><a href="#skills" class="nav-link">Навыки</a></li>
-                <li class="nav-item"><a href="#certificates" class="nav-link">Сертификаты</a></li>
-                <li class="nav-item"><a href="#tasks" class="nav-link">Услуги</a></li>
-                <li class="nav-item"><a href="#contact" class="nav-link">Контакты</a></li>
+                <li class="nav-item"><a href="index.html#about" class="nav-link">Обо мне</a></li>
+                <li class="nav-item"><a href="index.html#skills" class="nav-link">Навыки</a></li>
+                <li class="nav-item"><a href="index.html#certificates" class="nav-link">Сертификаты</a></li>
+                <li class="nav-item"><a href="tasks.html" class="nav-link">Услуги</a></li>
+                <li class="nav-item"><a href="blog.html" class="nav-link active">Блог</a></li>
+                <li class="nav-item"><a href="index.html#contact" class="nav-link">Контакты</a></li>
             </ul>
         </nav>
     </div>
@@ -35,33 +36,49 @@
 
 <!-- Основной блок с информацией -->
 <section id="about" class="hero">
-  <div class="container">
-    <div class="hero-content">
-      <div class="hero-text">
-        <h1 class="title">Ильнур Давлетбаев</h1>
-        <h2 class="subtitle">Веб-разработчик</h2>
-        <p class="description">Создаю современные, адаптивные и высокопроизводительные веб-приложения с использованием передовых технологий.</p>
-        <div class="social-links">
-          <a href="#"><i class="fab fa-github"></i></a>
-          <a href="#"><i class="fab fa-linkedin"></i></a>
-          <a href="#"><i class="fab fa-telegram"></i></a>
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="title">Иван Иванов</h1>
+                <h2 class="subtitle">Веб-разработчик</h2>
+                <p class="description">
+                    Создаю современные, адаптивные и высокопроизводительные веб-приложения
+                    с использованием передовых технологий. Более 5 лет опыта в разработке
+                    сложных интернет-решений.
+                </p>
+
+                <div class="social-links">
+                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+                    <a href="#" aria-label="VKontakte"><i class="fab fa-vk"></i></a>
+                </div>
+
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn">Связаться</a>
+                    <a href="certificates.html" class="btn btn-outline">Сертификаты</a>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <div class="photo-container">
+                    <div class="photo-frame"></div>
+                    <img src="images/profile.jpg" alt="Фото Иван Иванов, веб-разработчик" class="profile-img">
+                </div>
+
+                <div class="tech-icons">
+                    <i class="fab fa-html5" title="HTML5"></i>
+                    <i class="fab fa-css3-alt" title="CSS3"></i>
+                    <i class="fab fa-js" title="JavaScript"></i>
+                    <i class="fab fa-react" title="React"></i>
+                    <i class="fab fa-node-js" title="Node.js"></i>
+                    <i class="fab fa-linux" title="Linux"></i>
+                </div>
+            </div>
         </div>
-        <a href="#contact" class="btn">Связаться</a>
-      </div>
-      <div class="hero-image">
-        <img src="images/id.jpeg" alt="Фото программиста" class="profile-img">
-        <div class="tech-icons">
-          <i class="fab fa-html5" title="HTML5"></i>
-          <i class="fab fa-css3-alt" title="CSS3"></i>
-          <i class="fab fa-js" title="JavaScript"></i>
-          <i class="fab fa-react" title="React"></i>
-          <i class="fab fa-node-js" title="Node.js"></i>
-          <i class="fab fa-linux" title="Linux"></i>
-        </div>
-      </div>
     </div>
-  </div>
 </section>
+
 
 <!-- Блок с видами деятельности -->
 <section id="skills" class="skills-section">
@@ -119,21 +136,21 @@
   <div class="container">
     <h2 class="section-title">Мои сертификаты</h2>
     <div class="certificates-grid">
-      <div class="certificate-card">
+      <div class="certificate-mp-card">
         <img src="images/cert1.jpg" alt="Сертификат по веб-разработке">
         <div class="certificate-overlay">
           <h3>Веб-разработка</h3>
           <p>Advanced Web Development</p>
         </div>
       </div>
-      <div class="certificate-card">
+      <div class="certificate-mp-card">
         <img src="images/cert2.jpg" alt="Сертификат по Linux">
         <div class="certificate-overlay">
           <h3>Linux Administration</h3>
           <p>LPIC-1 Certified</p>
         </div>
       </div>
-      <div class="certificate-card">
+      <div class="certificate-mp-card">
         <img src="images/cert3.jpg" alt="Сертификат по JavaScript">
         <div class="certificate-overlay">
           <h3>JavaScript</h3>
@@ -259,8 +276,8 @@
 </div>
 
 <script src="js/main.js"></script>
-<script src="local%3Ftemplates/mnain/dist/js/modal.js"></script>
-<script src="local%3Ftemplates/mnain/dist/js/scroll-effects.js"></script>
+<!--<script src="local%3Ftemplates/mnain/dist/js/modal.js"></script>
+<script src="local%3Ftemplates/mnain/dist/js/scroll-effects.js"></script>-->
 
 <!-- Кнопка "Наверх" -->
 <button id="back-to-top" aria-label="Вернуться к началу страницы">

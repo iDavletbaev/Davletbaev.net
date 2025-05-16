@@ -39,18 +39,18 @@
             <p class="page-subtitle">Полезные статьи о веб-разработке и IT</p>
 
             <div class="blog-categories">
-                <a href="#" class="category-btn active">Все</a>
-                <a href="#" class="category-btn">Веб-разработка</a>
-                <a href="#" class="category-btn">Linux</a>
-                <a href="#" class="category-btn">JavaScript</a>
-                <a href="#" class="category-btn">Оптимизация</a>
+                <button class="category-btn active" data-category="all">Все</button>
+                <button class="category-btn" data-category="web">Веб-разработка</button>
+                <button class="category-btn" data-category="linux">Linux</button>
+                <button class="category-btn" data-category="js">JavaScript</button>
+                <button class="category-btn" data-category="optimization">Оптимизация</button>
             </div>
 
             <div class="blog-grid">
                 <!-- Статья 1 -->
-                <article class="blog-card">
+                <article class="blog-card" data-category="web">
                     <div class="blog-card-image">
-                        <img src="images/blog/web-dev.jpg" alt="Веб-разработка">
+                        <img src="images/cert1.jpg" alt="Веб-разработка">
                         <span class="blog-category">Веб-разработка</span>
                     </div>
                     <div class="blog-card-content">
@@ -65,9 +65,9 @@
                 </article>
 
                 <!-- Статья 2 -->
-                <article class="blog-card">
+                <article class="blog-card" data-category="linux">
                     <div class="blog-card-image">
-                        <img src="images/blog/linux-security.jpg" alt="Безопасность Linux">
+                        <img src="images/cert2.jpg" alt="Безопасность Linux">
                         <span class="blog-category">Linux</span>
                     </div>
                     <div class="blog-card-content">
@@ -99,5 +99,6 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script src="js/blog.js"></script>
 </body>
 </html>

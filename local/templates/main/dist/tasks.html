@@ -3,146 +3,211 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Типовые задачи | Портфолио веб-разработчика</title>
+    <title>Услуги | Портфолио веб-разработчика</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tasks.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="js/tasks.js"></script>
 </head>
+<script>
+    // Функции для работы с модальными окнами
+    function openModal(modalId) {
+        const modal = document.getElementById(modalId);
+        modal.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal(modalId) {
+        const modal = document.getElementById(modalId);
+        modal.style.display = 'none';
+        document.body.style.overflow = '';
+    }
+</script>
 <body>
-    <!-- Шапка с меню -->
-    <header class="header">
-        <div class="container">
-            <nav class="navbar">
-                <a href="index.html" class="logo">Ivan<span>Dev</span></a>
+<!-- Шапка с меню -->
+<header class="header">
+    <div class="container">
+        <nav class="navbar">
+            <a href="index.html" class="logo">Ivan<span>Dev</span></a>
 
-                <!-- Кнопка бургер для мобильных -->
-                <div class="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
 
-                <!-- Меню -->
-                <ul class="nav-menu">
-                    <li class="nav-item"><a href="index.html#about" class="nav-link">Обо мне</a></li>
-                    <li class="nav-item"><a href="index.html#skills" class="nav-link">Навыки</a></li>
-                    <li class="nav-item"><a href="index.html#certificates" class="nav-link">Сертификаты</a></li>
-                    <li class="nav-item"><a href="tasks.html" class="nav-link active">Услуги</a></li>
-                    <li class="nav-item"><a href="index.html#contact" class="nav-link">Контакты</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html#about" class="nav-link">Обо мне</a></li>
+                <li class="nav-item"><a href="index.html#skills" class="nav-link">Навыки</a></li>
+                <li class="nav-item"><a href="index.html#certificates" class="nav-link">Сертификаты</a></li>
+                <li class="nav-item"><a href="tasks.html" class="nav-link">Услуги</a></li>
+                <li class="nav-item"><a href="blog.html" class="nav-link active">Блог</a></li>
+                <li class="nav-item"><a href="index.html#contact" class="nav-link">Контакты</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
-    <main class="tasks-page">
-        <div class="container">
+<main class="page-content">
+    <div class="container">
+        <div class="page-header">
             <h1 class="page-title">Мои услуги</h1>
-            <p class="page-subtitle">Типовые задачи, которые я чаще всего выполняю</p>
+            <p class="page-subtitle">Профессиональные решения для вашего бизнеса</p>
+        </div>
 
+        <div class="tasks-container">
+            <!-- Основной контент страницы -->
             <div class="tasks-grid">
-                <!-- Блок 1 -->
+                <!-- Услуга 1 -->
                 <div class="task-card">
                     <div class="task-icon">
                         <i class="fas fa-laptop-code"></i>
                     </div>
                     <h3>Разработка сайтов</h3>
-                    <p>Создание корпоративных сайтов, лендингов и интернет-магазинов с нуля.</p>
-                    <button class="task-more" data-modal="#modal-web">Подробнее</button>
+                    <p>Создание корпоративных сайтов, лендингов и интернет-магазинов.</p>
+                    <button class="task-more" onclick="openModal('modal-web')">Подробнее</button>
                 </div>
 
-                <!-- Блок 2 -->
+                <!-- Услуга 2 -->
                 <div class="task-card">
                     <div class="task-icon">
                         <i class="fas fa-server"></i>
                     </div>
                     <h3>Настройка серверов</h3>
-                    <p>Развертывание и оптимизация веб-серверов (Nginx, Apache, Node.js).</p>
-                    <button class="task-more" data-modal="#modal-server">Подробнее</button>
+                    <p>Развертывание и оптимизация веб-серверов (Nginx, Apache).</p>
+                    <button class="task-more" onclick="openModal('modal-server')">Подробнее</button>
                 </div>
 
-                <!-- Остальные блоки аналогично с уникальными data-modal -->
+                <!-- Другие услуги -->
             </div>
-        </div>
-    </main>
 
-    <!-- Модальное окно 1 -->
-    <div id="modal-web" class="modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <h2>Разработка сайтов</h2>
-            <div class="modal-task-info">
-                <div class="modal-task-icon">
-                    <i class="fas fa-laptop-code"></i>
-                </div>
-                <div class="modal-task-content">
-                    <h3>Что включает услуга:</h3>
-                    <ul class="task-features">
-                        <li><i class="fas fa-check"></i> Создание сайтов с нуля по вашему дизайну</li>
-                        <li><i class="fas fa-check"></i> Адаптивная верстка под все устройства</li>
-                        <li><i class="fas fa-check"></i> Оптимизация скорости загрузки</li>
-                    </ul>
-                    <div class="task-tech">
-                        <h3>Используемые технологии:</h3>
-                        <div class="tech-tags">
-                            <span>HTML5</span>
-                            <span>CSS3</span>
-                            <span>JavaScript</span>
+            <!-- Модальные окна для каждой услуги -->
+            <div id="modal-web" class="modal">
+                <div class="modal-content">
+                    <span class="close-modal" onclick="closeModal('modal-web')">&times;</span>
+                    <div class="modal-task-header">
+                        <div class="modal-task-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h2>Разработка сайтов</h2>
+                    </div>
+                    <div class="modal-task-body">
+                        <h3>Полное описание услуги:</h3>
+                        <p>Профессиональная разработка сайтов любой сложности - от лендингов до крупных интернет-магазинов. Используем современные технологии и подходы.</p>
+
+                        <h3>Что входит в услугу:</h3>
+                        <ul class="task-features">
+                            <li><i class="fas fa-check"></i> Адаптивный дизайн</li>
+                            <li><i class="fas fa-check"></i> SEO-оптимизация</li>
+                            <li><i class="fas fa-check"></i> Интеграция с CMS</li>
+                            <li><i class="fas fa-check"></i> Тестирование на устройствах</li>
+                        </ul>
+
+                        <div class="task-tech">
+                            <h3>Используемые технологии:</h3>
+                            <div class="tech-tags">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                                <span>React</span>
+                            </div>
+                        </div>
+
+                        <div class="task-pricing">
+                            <h3>Стоимость:</h3>
+                            <p>От <span class="price">25 000</span> руб.</p>
+                            <small>Точная стоимость рассчитывается индивидуально</small>
                         </div>
                     </div>
-                    <div class="task-price">
-                        <h3>Стоимость:</h3>
-                        <p>От <span class="price">25 000</span> руб.</p>
-                        <small>Окончательная цена зависит от сложности проекта</small>
+                    <div class="modal-task-footer">
+                        <a href="#contact" class="btn">Заказать услугу</a>
                     </div>
                 </div>
             </div>
-            <div class="task-cta">
-                <a href="index.html#contact" class="btn">Заказать услугу</a>
+
+            <div id="modal-server" class="modal">
+                <div class="modal-content">
+                    <span class="close-modal" onclick="closeModal('modal-server')">&times;</span>
+                    <div class="modal-task-header">
+                        <div class="modal-task-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h2>Настройка серверов</h2>
+                    </div>
+                    <div class="modal-task-body">
+                        <!-- Уникальное содержимое для этой услуги -->
+                        <h3>Полное описание услуги:</h3>
+                        <p>Профессиональная настройка и оптимизация серверов для максимальной производительности и безопасности.</p>
+
+                        <!-- Другие специфические данные -->
+                    </div>
+                    <div class="modal-task-footer">
+                        <a href="#contact" class="btn">Заказать услугу</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Другие модальные окна -->
+
+            <div class="pagination">
+                <a href="#" class="pagination-btn active">1</a>
+                <a href="#" class="pagination-btn">2</a>
+                <a href="#" class="pagination-btn">3</a>
+                <a href="#" class="pagination-btn next">Следующая <i class="fas fa-arrow-right"></i></a>
             </div>
         </div>
     </div>
+</main>
 
-    <!-- Модальное окно 2 -->
-    <div id="modal-server" class="modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <h2>Настройка серверов</h2>
-            <!-- ... аналогичное содержимое ... -->
+<!-- Подвал -->
+<footer class="footer">
+    <!-- Аналогично tasks.html -->
+</footer>
+
+<!-- Кнопка "Наверх" -->
+<button id="back-to-top" aria-label="Вернуться к началу страницы">
+    <svg id="progress-circle" width="60" height="60" viewBox="0 0 60 60">
+        <circle class="bg" cx="30" cy="30" r="28" />
+        <circle class="progress" cx="30" cy="30" r="28" />
+    </svg>
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- Модальное окно для услуг -->
+<div id="task-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div class="modal-task">
+            <div class="task-header">
+                <div class="task-icon-lg">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <h2 id="modal-task-title">ewrferf</h2>
+            </div>
+            <div class="task-body">
+                <div class="task-description-full" id="modal-task-description"></div>
+                <div class="task-details">
+                    <h3>Что входит в услугу:</h3>
+                    <ul class="task-features" id="modal-task-features"></ul>
+                </div>
+                <div class="task-pricing">
+                    <div class="price-block">
+                        <span class="price-label">Стоимость:</span>
+                        <span class="price-value" id="modal-task-price"></span>
+                    </div>
+                    <div class="time-block">
+                        <span class="time-label">Срок выполнения:</span>
+                        <span class="time-value" id="modal-task-time"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="task-footer">
+                <a href="#contact" class="btn">Заказать услугу</a>
+            </div>
         </div>
     </div>
+</div>
 
-    <!-- Подвал -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <a href="index.html" class="logo">Ivan<span>Dev</span></a>
-                    <p>Веб-разработчик & Linux администратор</p>
-                </div>
-                <div class="footer-links">
-                    <h3>Быстрые ссылки</h3>
-                    <ul>
-                        <li><a href="index.html#about">Обо мне</a></li>
-                        <li><a href="index.html#skills">Навыки</a></li>
-                        <li><a href="index.html#certificates">Сертификаты</a></li>
-                        <li><a href="tasks.html">Услуги</a></li>
-                        <li><a href="index.html#contact">Контакты</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h3>Контакты</h3>
-                    <ul>
-                        <li><i class="fas fa-envelope"></i> ivan@example.com</li>
-                        <li><i class="fas fa-phone"></i> +7 (123) 456-78-90</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2023 Иван Иванов. Все права защищены.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="js/main.js"></script>
-    <script src="js/tasks-modal.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

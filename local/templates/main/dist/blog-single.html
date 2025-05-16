@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Современные тренды веб-разработки в 2023 году | Блог</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/blog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Шапка с меню -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">Ivan<span>Dev</span></a>
+
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html#about" class="nav-link">Обо мне</a></li>
+                    <li class="nav-item"><a href="index.html#skills" class="nav-link">Навыки</a></li>
+                    <li class="nav-item"><a href="index.html#certificates" class="nav-link">Сертификаты</a></li>
+                    <li class="nav-item"><a href="tasks.html" class="nav-link">Услуги</a></li>
+                    <li class="nav-item"><a href="blog.html" class="nav-link active">Блог</a></li>
+                    <li class="nav-item"><a href="index.html#contact" class="nav-link">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="blog-single-page">
+        <div class="container">
+            <article class="blog-article">
+                <div class="article-header">
+                    <div class="article-meta">
+                        <span class="article-category">Веб-разработка</span>
+                        <span class="article-date"><i class="far fa-calendar"></i> 15 мая 2023</span>
+                        <span class="article-reading-time"><i class="far fa-clock"></i> 5 мин чтения</span>
+                    </div>
+                    <h1 class="article-title">Современные тренды веб-разработки в 2023 году</h1>
+                    <div class="article-author">
+                        <img src="images/profile.jpg" alt="Иван Иванов" class="author-avatar">
+                        <div class="author-info">
+                            <span class="author-name">Иван Иванов</span>
+                            <span class="author-title">Веб-разработчик</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="article-image">
+                    <img src="images/blog/web-dev.jpg" alt="Веб-разработка">
+                </div>
+
+                <div class="article-content">
+                    <p>2023 год принес множество интересных изменений в мир веб-разработки. В этой статье я расскажу о самых значимых трендах, которые стоит учитывать при создании современных веб-приложений.</p>
+
+                    <h2>1. Рост популярности Jamstack</h2>
+                    <p>Архитектура Jamstack (JavaScript, APIs, Markup) продолжает набирать обороты. Основные преимущества:</p>
+                    <ul>
+                        <li>Высокая производительность</li>
+                        <li>Улучшенная безопасность</li>
+                        <li>Лучшее масштабирование</li>
+                        <li>Упрощенный процесс разработки</li>
+                    </ul>
+                    <p>Популярные фреймворки: Next.js, Gatsby, Nuxt.js.</p>
+
+                    <h2>2. WebAssembly для сложных вычислений</h2>
+                    <p>WebAssembly позволяет выполнять ресурсоемкие вычисления прямо в браузере с производительностью, близкой к нативным приложениям.</p>
+
+                    <div class="code-example">
+                        <pre><code class="language-javascript">// Пример использования WebAssembly
+const result = WebAssembly.instantiateStreaming(
+  fetch('module.wasm'),
+  imports
+);</code></pre>
+                    </div>
+
+                    <h2>3. Улучшения в инструментах разработчика</h2>
+                    <p>Chrome DevTools получил множество улучшений, включая:</p>
+                    <ul>
+                        <li>Новые возможности отладки CSS</li>
+                        <li>Улучшенный профилировщик производительности</li>
+                        <li>Инструменты для работы с Web Components</li>
+                    </ul>
+
+                    <div class="article-image">
+                        <img src="images/blog/devtools.jpg" alt="Chrome DevTools">
+                        <span class="image-caption">Новый интерфейс Chrome DevTools</span>
+                    </div>
+
+                    <h2>Заключение</h2>
+                    <p>2023 год обещает быть интересным для веб-разработчиков. Освоение этих технологий поможет оставаться востребованным специалистом и создавать действительно современные приложения.</p>
+                </div>
+
+                <div class="article-footer">
+                    <div class="article-tags">
+                        <a href="#" class="tag">#вебразработка</a>
+                        <a href="#" class="tag">#тренды</a>
+                        <a href="#" class="tag">#2023</a>
+                    </div>
+
+                    <div class="article-share">
+                        <span>Поделиться:</span>
+                        <a href="#" class="social-share"><i class="fab fa-vk"></i></a>
+                        <a href="#" class="social-share"><i class="fab fa-telegram"></i></a>
+                        <a href="#" class="social-share"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </article>
+
+            <section class="related-posts">
+                <h2 class="related-title">Читайте также</h2>
+                <div class="related-grid">
+                    <!-- Похожие статьи -->
+                </div>
+            </section>
+
+            <section class="comments-section">
+                <h2 class="comments-title">Комментарии (3)</h2>
+                <div class="comments-list">
+                    <!-- Список комментариев -->
+                </div>
+                <form class="comment-form">
+                    <h3>Оставить комментарий</h3>
+                    <div class="form-group">
+                        <textarea placeholder="Ваш комментарий..." required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Ваше имя" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Ваш email" required>
+                    </div>
+                    <button type="submit" class="btn">Отправить</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <!-- ... (как в предыдущих файлах) ... -->
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

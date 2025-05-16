@@ -1,6 +1,6 @@
 :root {
-    --primary-color: #6c63ff;
-    --primary-dark: #564fd8;
+    --primary-color: rgba(0, 200, 0, 1);
+    --primary-dark: rgba(0, 120, 0, 1);
     --secondary-color: #2d3748;
     --dark-color: #1a202c;
     --light-color: #f7fafc;
@@ -17,11 +17,22 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--dark-color);
     color: var(--light-color);
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 .container {
@@ -40,18 +51,20 @@ body {
     z-index: 1000;
     backdrop-filter: blur(10px);
     transition: all 0.3s ease;
+    padding: 15px 0;
 }
 
 .header.scrolled {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     background-color: rgba(26, 32, 44, 0.98);
+    padding: 10px 0;
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
+    position: relative;
 }
 
 .logo {
@@ -59,6 +72,7 @@ body {
     font-weight: 700;
     color: var(--light-color);
     text-decoration: none;
+    z-index: 1001;
 }
 
 .logo span {
@@ -68,6 +82,7 @@ body {
 .nav-menu {
     display: flex;
     list-style: none;
+    transition: all 0.5s ease;
 }
 
 .nav-item {
@@ -80,6 +95,7 @@ body {
     font-weight: 500;
     transition: color 0.3s;
     position: relative;
+    font-size: 1.1rem;
 }
 
 .nav-link:hover {
@@ -101,9 +117,14 @@ body {
     width: 100%;
 }
 
+/* Бургер меню */
 .hamburger {
     display: none;
     cursor: pointer;
+    padding: 5px;
+    z-index: 1001;
+    background: transparent;
+    border: none;
 }
 
 .bar {
@@ -115,11 +136,36 @@ body {
     transition: all 0.3s ease;
 }
 
+/* Основные секции */
+section {
+    padding: 100px 0;
+    scroll-margin-top: 80px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 4px;
+    background-color: var(--primary-color);
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
 /* Герой секция */
 .hero {
     padding: 180px 0 100px;
-    background: linear-gradient(135deg, rgba(26, 32, 44, 0.9) 0%, rgba(42, 50, 70, 0.9) 100%), 
-                url('../images/background-pattern.png');
+    background: linear-gradient(135deg, rgba(26, 32, 44, 0.9) 0%, rgba(42, 50, 70, 0.9) 100%),
+    url('../images/background-pattern.png');
     background-size: cover;
 }
 
@@ -182,6 +228,7 @@ body {
     transition: all 0.3s;
     border: none;
     cursor: pointer;
+    font-size: 1rem;
 }
 
 .btn:hover {
@@ -240,28 +287,8 @@ body {
     transform: scale(1.2);
 }
 
-/* Секции */
-.section-title {
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 60px;
-    position: relative;
-}
-
-.section-title::after {
-    content: '';
-    position: absolute;
-    width: 80px;
-    height: 4px;
-    background-color: var(--primary-color);
-    bottom: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 2px;
-}
-
+/* Секции с навыками */
 .skills-section {
-    padding: 100px 0;
     background-color: var(--secondary-color);
 }
 
@@ -301,10 +328,7 @@ body {
     color: var(--gray-color);
 }
 
-.certificates-section {
-    padding: 100px 0;
-}
-
+/* Сертификаты */
 .certificates-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -355,8 +379,8 @@ body {
     text-align: center;
 }
 
+/* Типовые задачи */
 .tasks-section {
-    padding: 100px 0;
     background-color: var(--secondary-color);
 }
 
@@ -405,6 +429,7 @@ body {
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s;
+    font-size: 1rem;
 }
 
 .task-more:hover {
@@ -412,10 +437,7 @@ body {
     color: var(--light-color);
 }
 
-.contact-section {
-    padding: 100px 0;
-}
-
+/* Контакты */
 .contact-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -574,25 +596,24 @@ body {
 .modal {
     display: none;
     position: fixed;
-    z-index: 2000;
+    z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
-    overflow: auto;
-    backdrop-filter: blur(5px);
+    overflow-y: auto;
 }
 
 .modal-content {
     background-color: var(--secondary-color);
-    margin: 5% auto;
-    padding: 40px;
+    margin: 2% auto;
+    padding: 30px;
     border-radius: 10px;
     max-width: 800px;
-    width: 90%;
+    width: 95%;
     position: relative;
-    animation: modalFadeIn 0.4s;
+    animation: modalFadeIn 0.3s ease-out;
 }
 
 .close-modal {
@@ -609,78 +630,65 @@ body {
     color: var(--light-color);
 }
 
-#modal-title {
-    color: var(--primary-color);
-    margin-bottom: 20px;
-    font-size: 2rem;
-}
-
-#modal-body {
-    line-height: 1.8;
-}
-
-/* Страница сертификатов */
-.certificates-page {
-    padding: 150px 0 100px;
-}
-
-.page-title {
-    font-size: 2.8rem;
-    text-align: center;
-    margin-bottom: 60px;
-    color: var(--primary-color);
-}
-
-.certificate-categories {
+.modal-task-info {
     display: flex;
-    justify-content: center;
+    gap: 30px;
+    margin-bottom: 25px;
+}
+
+.modal-task-icon {
+    font-size: 3rem;
+    color: var(--primary-color);
+    min-width: 60px;
+}
+
+.task-features {
+    list-style: none;
+    margin: 15px 0;
+}
+
+.task-features li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.tech-tags {
+    display: flex;
     flex-wrap: wrap;
-    gap: 15px;
-    margin-bottom: 50px;
+    gap: 10px;
+    margin-top: 15px;
 }
 
-.category-btn {
-    background-color: transparent;
-    border: 2px solid var(--primary-color);
+.tech-tags span {
+    background: var(--dark-color);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.task-price .price {
     color: var(--primary-color);
-    padding: 8px 20px;
-    border-radius: 30px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s;
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 
-.category-btn:hover,
-.category-btn.active {
-    background-color: var(--primary-color);
-    color: var(--light-color);
+@keyframes modalFadeIn {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-.all-certificates {
-    margin-top: 50px;
-}
-
-.category-title {
-    font-size: 2rem;
-    margin: 40px 0 30px;
-    color: var(--primary-color);
-    position: relative;
-    padding-bottom: 10px;
-}
-
-.category-title::after {
-    content: '';
-    position: absolute;
-    width: 60px;
-    height: 3px;
-    background-color: var(--primary-color);
-    bottom: 0;
-    left: 0;
-}
-
-/* Страница задач */
-.tasks-page {
-    padding: 150px 0 100px;
+/* Анимации */
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Адаптивность */
@@ -689,5 +697,193 @@ body {
         flex-direction: column;
         text-align: center;
     }
-    
+
     .hero-text {
+        margin-bottom: 50px;
+    }
+
+    .title {
+        font-size: 2.8rem;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        background-color: var(--dark-color);
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 0;
+        transition: 0.3s;
+        z-index: 999;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 15px 0;
+    }
+
+    .nav-link {
+        font-size: 1.2rem;
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: opacity 0.3s, transform 0.3s;
+    }
+
+    .nav-menu.active .nav-link {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .nav-menu.active .nav-item:nth-child(1) .nav-link {
+        transition-delay: 0.1s;
+    }
+
+    .nav-menu.active .nav-item:nth-child(2) .nav-link {
+        transition-delay: 0.2s;
+    }
+
+    .nav-menu.active .nav-item:nth-child(3) .nav-link {
+        transition-delay: 0.3s;
+    }
+
+    .nav-menu.active .nav-item:nth-child(4) .nav-link {
+        transition-delay: 0.4s;
+    }
+
+    .nav-menu.active .nav-item:nth-child(5) .nav-link {
+        transition-delay: 0.5s;
+    }
+
+    .profile-img {
+        width: 280px;
+        height: 280px;
+    }
+
+    section {
+        padding: 80px 0;
+        scroll-margin-top: 70px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 2.2rem;
+    }
+
+    .subtitle {
+        font-size: 1.2rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .btn {
+        padding: 10px 25px;
+    }
+
+    .profile-img {
+        width: 220px;
+        height: 220px;
+    }
+
+    .modal-content {
+        padding: 30px 20px;
+    }
+}
+/* Кнопка "Наверх" */
+#back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 20px rgba(108, 99, 255, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.4s ease-out;
+    z-index: 999;
+}
+
+#back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+#back-to-top:hover {
+    background: var(--primary-dark);
+}
+
+#back-to-top i {
+    font-size: 1.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+#progress-circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+}
+
+#progress-circle circle {
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+}
+
+#progress-circle .bg {
+    stroke: rgba(255, 255, 255, 0.2);
+}
+
+#progress-circle .progress {
+    stroke: white;
+    stroke-dasharray: 176;
+    stroke-dashoffset: 176;
+    transition: stroke-dashoffset 0.3s ease;
+}

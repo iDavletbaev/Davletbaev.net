@@ -5,91 +5,144 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Типовые задачи | Портфолио веб-разработчика</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="local%3Ftemplates/mnain/dist/css/animations.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Шапка с меню (аналогичная index.html) -->
+    <!-- Шапка с меню -->
     <header class="header">
         <div class="container">
             <nav class="navbar">
-                <a href="#" class="logo">Ivan<span>Dev</span></a>
-                <nav class="navbar">
-                    <a href="#" class="logo">Ivan<span>Dev</span></a>
-                    <ul class="nav-menu">
-                        <li class="nav-item"><a href="/#about" class="nav-link">Обо мне</a></li>
-                        <li class="nav-item"><a href="/#skills" class="nav-link">Навыки</a></li>
-                        <li class="nav-item"><a href="/#certificates" class="nav-link">Сертификаты</a></li>
-                        <li class="nav-item"><a href="/#tasks" class="nav-link">Услуги</a></li>
-                        <li class="nav-item"><a href="/#contact" class="nav-link">Контакты</a></li>
-                    </ul>
-                    <div class="hamburger">
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                    </div>
-                </nav>
+                <a href="index.html" class="logo">Ivan<span>Dev</span></a>
+
+                <!-- Кнопка бургер для мобильных -->
                 <div class="hamburger">
                     <span class="bar"></span>
                     <span class="bar"></span>
                     <span class="bar"></span>
                 </div>
+
+                <!-- Меню -->
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html#about" class="nav-link">Обо мне</a></li>
+                    <li class="nav-item"><a href="index.html#skills" class="nav-link">Навыки</a></li>
+                    <li class="nav-item"><a href="index.html#certificates" class="nav-link">Сертификаты</a></li>
+                    <li class="nav-item"><a href="tasks.html" class="nav-link active">Услуги</a></li>
+                    <li class="nav-item"><a href="index.html#contact" class="nav-link">Контакты</a></li>
+                </ul>
             </nav>
         </div>
     </header>
 
     <main class="tasks-page">
         <div class="container">
-            <h1 class="page-title">Типовые задачи</h1>
-            
+            <h1 class="page-title">Мои услуги</h1>
+            <p class="page-subtitle">Типовые задачи, которые я чаще всего выполняю</p>
+
             <div class="tasks-grid">
-                <div class="task-card" data-task="1">
+                <!-- Блок 1 -->
+                <div class="task-card">
                     <div class="task-icon">
                         <i class="fas fa-laptop-code"></i>
                     </div>
                     <h3>Разработка сайтов</h3>
-                    <p>Создание корпоративных сайтов, лендингов и интернет-магазинов.</p>
-                    <button class="task-more">Подробнее</button>
+                    <p>Создание корпоративных сайтов, лендингов и интернет-магазинов с нуля.</p>
+                    <button class="task-more" data-modal="#modal-web">Подробнее</button>
                 </div>
-                
-                <div class="task-card" data-task="2">
+
+                <!-- Блок 2 -->
+                <div class="task-card">
                     <div class="task-icon">
                         <i class="fas fa-server"></i>
                     </div>
                     <h3>Настройка серверов</h3>
-                    <p>Развертывание и оптимизация веб-серверов (Nginx, Apache).</p>
-                    <button class="task-more">Подробнее</button>
+                    <p>Развертывание и оптимизация веб-серверов (Nginx, Apache, Node.js).</p>
+                    <button class="task-more" data-modal="#modal-server">Подробнее</button>
                 </div>
-                
-                <div class="task-card" data-task="3">
-                    <div class="task-icon">
-                        <i class="fas fa-bug"></i>
-                    </div>
-                    <h3>Исправление ошибок</h3>
-                    <p>Диагностика и устранение проблем в существующих проектах.</p>
-                    <button class="task-more">Подробнее</button>
-                </div>
-                
-                <!-- Еще задачи -->
+
+                <!-- Остальные блоки аналогично с уникальными data-modal -->
             </div>
         </div>
     </main>
 
-    <!-- Подвал (аналогичный index.html) -->
-    <footer class="footer">
-        <!-- ... -->
-    </footer>
-
-    <!-- Модальное окно для задач -->
-    <div id="task-modal" class="modal">
+    <!-- Модальное окно 1 -->
+    <div id="modal-web" class="modal">
         <div class="modal-content">
             <span class="close-modal">&times;</span>
-            <h2 id="task-modal-title"></h2>
-            <div id="task-modal-body"></div>
+            <h2>Разработка сайтов</h2>
+            <div class="modal-task-info">
+                <div class="modal-task-icon">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <div class="modal-task-content">
+                    <h3>Что включает услуга:</h3>
+                    <ul class="task-features">
+                        <li><i class="fas fa-check"></i> Создание сайтов с нуля по вашему дизайну</li>
+                        <li><i class="fas fa-check"></i> Адаптивная верстка под все устройства</li>
+                        <li><i class="fas fa-check"></i> Оптимизация скорости загрузки</li>
+                    </ul>
+                    <div class="task-tech">
+                        <h3>Используемые технологии:</h3>
+                        <div class="tech-tags">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="task-price">
+                        <h3>Стоимость:</h3>
+                        <p>От <span class="price">25 000</span> руб.</p>
+                        <small>Окончательная цена зависит от сложности проекта</small>
+                    </div>
+                </div>
+            </div>
+            <div class="task-cta">
+                <a href="index.html#contact" class="btn">Заказать услугу</a>
+            </div>
         </div>
     </div>
 
+    <!-- Модальное окно 2 -->
+    <div id="modal-server" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Настройка серверов</h2>
+            <!-- ... аналогичное содержимое ... -->
+        </div>
+    </div>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="index.html" class="logo">Ivan<span>Dev</span></a>
+                    <p>Веб-разработчик & Linux администратор</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Быстрые ссылки</h3>
+                    <ul>
+                        <li><a href="index.html#about">Обо мне</a></li>
+                        <li><a href="index.html#skills">Навыки</a></li>
+                        <li><a href="index.html#certificates">Сертификаты</a></li>
+                        <li><a href="tasks.html">Услуги</a></li>
+                        <li><a href="index.html#contact">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Контакты</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> ivan@example.com</li>
+                        <li><i class="fas fa-phone"></i> +7 (123) 456-78-90</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Иван Иванов. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
     <script src="js/main.js"></script>
-    <script src="local%3Ftemplates/mnain/dist/js/tasks-modal.js"></script>
+    <script src="js/tasks-modal.js"></script>
 </body>
 </html>

@@ -12,7 +12,7 @@
 <header class="header">
     <div class="container">
         <nav class="navbar">
-            <a href="#" class="logo">Ilnur<span>Dev</span></a>
+            <a href="#" class="logo">Ilnur <span>Davletbaev</span></a>
 
             <!-- Кнопка бургер для мобильных -->
             <div class="hamburger">
@@ -39,7 +39,7 @@
     <div class="container">
         <div class="hero-content">
             <div class="hero-text">
-                <h1 class="title">Иван Иванов</h1>
+                <h1 class="title">Ильнур Давлетбаев</h1>
                 <h2 class="subtitle">Веб-разработчик</h2>
                 <p class="description">
                     Создаю современные, адаптивные и высокопроизводительные веб-приложения
@@ -51,7 +51,7 @@
                     <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
                     <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
                     <a href="#" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
-                    <a href="#" aria-label="VKontakte"><i class="fab fa-vk"></i></a>
+<!--                    <a href="#" aria-label="VKontakte"><i class="fab fa-vk"></i></a>-->
                 </div>
 
                 <div class="hero-buttons">
@@ -216,7 +216,7 @@
           <a href="#"><i class="fab fa-vk"></i></a>
         </div>
       </div>
-      <div class="contact-form">
+      <div class="contact-form" data-cursor-hover>
         <form id="feedback-form">
           <div class="form-group">
             <input type="text" id="name" name="name" placeholder="Ваше имя" required>
@@ -276,8 +276,7 @@
 </div>
 
 <script src="js/main.js"></script>
-<!--<script src="local%3Ftemplates/mnain/dist/js/modal.js"></script>
-<script src="local%3Ftemplates/mnain/dist/js/scroll-effects.js"></script>-->
+<script src="js/cursor.js"></script>
 
 <!-- Кнопка "Наверх" -->
 <button id="back-to-top" aria-label="Вернуться к началу страницы">
@@ -287,5 +286,7 @@
     </svg>
     <i class="fas fa-arrow-up"></i>
 </button>
+<div class="cursor"></div>
+<div class="cursor-follower"></div>
 </body>
 </html>

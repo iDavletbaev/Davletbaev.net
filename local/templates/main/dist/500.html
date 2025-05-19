@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ошибка сервера | 500</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/errors.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="error-container">
+        <div class="error-content">
+            <div class="error-animation">
+                <div class="error-circle error-circle-500">
+                    <div class="error-number">5</div>
+                    <div class="error-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <div class="error-number">0</div>
+                    <div class="error-number">0</div>
+                </div>
+            </div>
+            <h1>Ошибка сервера</h1>
+            <p>На сервере произошла непредвиденная ошибка. Мы уже работаем над решением</p>
+            <div class="error-buttons">
+                <a href="index.html" class="btn btn-error">
+                    <i class="fas fa-home"></i> На главную
+                </a>
+                <a href="mailto:support@example.com" class="btn btn-error-outline">
+                    <i class="fas fa-envelope"></i> Написать в поддержку
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Анимационные элементы -->
+    <div class="error-particle error-particle-500" style="--i:1"></div>
+    <div class="error-particle error-particle-500" style="--i:2"></div>
+    <!-- Еще частицы -->
+
+    <script src="js/errors.js"></script>
+    <script src="js/cursor.js"></script>
+
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+</body>
+</html>

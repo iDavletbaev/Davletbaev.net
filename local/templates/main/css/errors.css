@@ -1,0 +1,166 @@
+/* Общие стили для страниц ошибок */
+.error-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1a202c, #2d3748);
+    padding: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.error-content {
+    text-align: center;
+    max-width: 600px;
+    position: relative;
+    z-index: 2;
+}
+
+.error-animation {
+    margin-bottom: 40px;
+}
+
+.error-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 0 auto;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: rgba(108, 99, 255, 0.1);
+    border: 5px dashed rgba(108, 99, 255, 0.3);
+    animation: rotate 20s linear infinite;
+}
+
+.error-circle-500 {
+    width: 350px;
+    height: 350px;
+}
+
+.error-number {
+    font-size: 5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 0 10px;
+    text-shadow: 0 0 10px rgba(108, 99, 255, 0.5);
+}
+
+.error-icon {
+    font-size: 4rem;
+    color: var(--primary-color);
+    animation: pulse 2s infinite alternate;
+}
+
+.error-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--light-color);
+}
+
+.error-content p {
+    font-size: 1.2rem;
+    color: var(--gray-color);
+    margin-bottom: 30px;
+}
+
+.error-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn-error {
+    background: var(--primary-color);
+    color: white;
+    padding: 12px 25px;
+}
+
+.btn-error-outline {
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 12px 25px;
+}
+
+.btn-error:hover, .btn-error-outline:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(108, 99, 255, 0.3);
+}
+
+/* Анимационные частицы */
+.error-particle {
+    position: absolute;
+    background: rgba(108, 99, 255, 0.5);
+    border-radius: 50%;
+    animation: float calc(15s * var(--i)) linear infinite;
+    filter: blur(1px);
+    z-index: 1;
+}
+
+.error-particle:nth-child(odd) {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.error-particle-500 {
+    background: rgba(255, 99, 71, 0.5);
+}
+
+/* Анимации */
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.1); }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .error-circle {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .error-circle-500 {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .error-number {
+        font-size: 3rem;
+    }
+    
+    .error-icon {
+        font-size: 2.5rem;
+    }
+    
+    .error-content h1 {
+        font-size: 2rem;
+    }
+    
+    .error-content p {
+        font-size: 1rem;
+    }
+    
+    .error-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

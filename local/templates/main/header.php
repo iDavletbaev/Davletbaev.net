@@ -18,6 +18,7 @@ use Bitrix\Main\Page\Asset;
     ?>
 </head>
 <body>
+
 <!-- Шапка с меню -->
 <header class="header">
     <?php $APPLICATION->ShowPanel();?>
@@ -25,22 +26,39 @@ use Bitrix\Main\Page\Asset;
         <nav class="navbar">
             <a href="#" class="logo">Ilnur <span>Davletbaev</span></a>
 
+            <?$APPLICATION->IncludeComponent("bitrix:menu", "top", Array(
+	"ALLOW_MULTI_SELECT" => "N",	// Разрешить несколько активных пунктов одновременно
+		"CHILD_MENU_TYPE" => "left",	// Тип меню для остальных уровней
+		"DELAY" => "N",	// Откладывать выполнение шаблона меню
+		"MAX_LEVEL" => "1",	// Уровень вложенности меню
+		"MENU_CACHE_GET_VARS" => array(	// Значимые переменные запроса
+			0 => "",
+		),
+		"MENU_CACHE_TIME" => "3600",	// Время кеширования (сек.)
+		"MENU_CACHE_TYPE" => "A",	// Тип кеширования
+		"MENU_CACHE_USE_GROUPS" => "Y",	// Учитывать права доступа
+		"ROOT_MENU_TYPE" => "top",	// Тип меню для первого уровня
+		"USE_EXT" => "N",	// Подключать файлы с именами вида .тип_меню.menu_ext.php
+	),
+	false
+);?>
+
             <!-- Кнопка бургер для мобильных -->
-            <div class="hamburger">
+            <!--<div class="hamburger">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
-            </div>
+            </div>-->
 
             <!-- Меню -->
-            <ul class="nav-menu">
+            <!--<ul class="nav-menu">
                 <li class="nav-item"><a href="/#about" class="nav-link">Обо мне</a></li>
                 <li class="nav-item"><a href="/#skills" class="nav-link">Навыки</a></li>
                 <li class="nav-item"><a href="/#certificates" class="nav-link">Сертификаты</a></li>
                 <li class="nav-item"><a href="tasks.html" class="nav-link">Услуги</a></li>
                 <li class="nav-item"><a href="blog.html" class="nav-link active">Блог</a></li>
                 <li class="nav-item"><a href="/#contact" class="nav-link">Контакты</a></li>
-            </ul>
+            </ul>-->
         </nav>
     </div>
 </header>

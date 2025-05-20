@@ -6,3 +6,5 @@
 /local/logs/*
 /local/vendor/*
 /local/composer.lock
+/local/vendor/
+/local/composer.lock

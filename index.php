@@ -1,52 +1,72 @@
 <?php
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 /** @global CMain $APPLICATION */
-$APPLICATION->SetTitle("Новости банка");
+$APPLICATION->SetTitle("Ильнур Давлетбаев");
 ?>
-    <!-- Основной блок с информацией -->
-    <section id="about" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1 class="title">Ильнур Давлетбаев</h1>
-                    <h2 class="subtitle">Веб-разработчик</h2>
-                    <p class="description">
-                        Создаю современные, адаптивные и высокопроизводительные веб-приложения
-                        с использованием передовых технологий. Более 5 лет опыта в разработке
-                        сложных интернет-решений.
-                    </p>
 
-                    <div class="social-links">
-                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
-                        <!--                    <a href="#" aria-label="VKontakte"><i class="fab fa-vk"></i></a>-->
-                    </div>
-
-                    <div class="hero-buttons">
-                        <a href="#contact" class="btn">Связаться</a>
-                        <a href="certificates.html" class="btn btn-outline">Сертификаты</a>
-                    </div>
-                </div>
-
-                <div class="hero-image">
-                    <div class="photo-container">
-                        <div class="photo-frame"></div>
-                        <img src="images/profile.jpg" alt="Фото Иван Иванов, веб-разработчик" class="profile-img">
-                    </div>
-
-                    <div class="tech-icons">
-                        <i class="fab fa-html5" title="HTML5"></i>
-                        <i class="fab fa-css3-alt" title="CSS3"></i>
-                        <i class="fab fa-js" title="JavaScript"></i>
-                        <i class="fab fa-react" title="React"></i>
-                        <i class="fab fa-node-js" title="Node.js"></i>
-                        <i class="fab fa-linux" title="Linux"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<?php
+// Основной блок с информацией
+$APPLICATION->IncludeComponent(
+    "bitrix:news.detail",
+    "hero",
+    array(
+        "ACTIVE_DATE_FORMAT" => "d.m.Y",
+        "ADD_ELEMENT_CHAIN" => "N",
+        "ADD_SECTIONS_CHAIN" => "N",
+        "AJAX_MODE" => "N",
+        "AJAX_OPTION_ADDITIONAL" => "",
+        "AJAX_OPTION_HISTORY" => "N",
+        "AJAX_OPTION_JUMP" => "N",
+        "AJAX_OPTION_STYLE" => "N",
+        "BROWSER_TITLE" => "-",
+        "CACHE_GROUPS" => "Y",
+        "CACHE_TIME" => "36000000",
+        "CACHE_TYPE" => "A",
+        "CHECK_DATES" => "Y",
+        "DETAIL_URL" => "",
+        "DISPLAY_BOTTOM_PAGER" => "N",
+        "DISPLAY_DATE" => "N",
+        "DISPLAY_NAME" => "Y",
+        "DISPLAY_PICTURE" => "Y",
+        "DISPLAY_PREVIEW_TEXT" => "Y",
+        "DISPLAY_TOP_PAGER" => "N",
+        "ELEMENT_CODE" => "",
+        "ELEMENT_ID" => "7",
+        "FIELD_CODE" => array(
+            0 => "DETAIL_TEXT",
+            1 => "",
+        ),
+        "IBLOCK_ID" => "3",
+        "IBLOCK_TYPE" => "blocks",
+        "IBLOCK_URL" => "",
+        "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+        "MESSAGE_404" => "",
+        "META_DESCRIPTION" => "-",
+        "META_KEYWORDS" => "-",
+        "PAGER_BASE_LINK_ENABLE" => "N",
+        "PAGER_SHOW_ALL" => "N",
+        "PAGER_TEMPLATE" => ".default",
+        "PAGER_TITLE" => "Страница",
+        "PROPERTY_CODE" => array(
+            0 => "CONTACT_BTN",
+            1 => "SECOND_BTN",
+            2 => "",
+        ),
+        "SET_BROWSER_TITLE" => "N",
+        "SET_CANONICAL_URL" => "N",
+        "SET_LAST_MODIFIED" => "N",
+        "SET_META_DESCRIPTION" => "N",
+        "SET_META_KEYWORDS" => "N",
+        "SET_STATUS_404" => "N",
+        "SET_TITLE" => "N",
+        "SHOW_404" => "N",
+        "STRICT_SECTION_CHECK" => "N",
+        "USE_PERMISSIONS" => "N",
+        "USE_SHARE" => "N",
+        "COMPONENT_TEMPLATE" => "hero"
+    ),
+    false
+);?>
 
     <!-- Блок с видами деятельности -->
     <section id="skills" class="skills-section">

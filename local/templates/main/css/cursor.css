@@ -1,0 +1,116 @@
+/* Кастомный курсор */
+html {
+    cursor: none;
+}
+
+body {
+    overflow-x: hidden;
+}
+.cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgba(0, 255, 0, 0.5);
+    pointer-events: none;
+    mix-blend-mode: difference;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease;
+}
+.cursor-follower {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9998;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
+}
+/* Эффекты при наведении */
+a:hover ~ .cursor,
+button:hover ~ .cursor,
+.cursor-hover {
+    transform: translate(-50%, -50%) scale(1.5);
+    background-color: var(--primary-dark);
+}
+a:hover ~ .cursor-follower,
+button:hover ~ .cursor-follower,
+.cursor-follower-hover {
+    width: 60px;
+    height: 60px;
+}
+@media (hover: none) {
+    html {
+        cursor: default;
+    }
+    .cursor, .cursor-follower {
+        display: none;
+    }
+}
+/* Кастомный курсор для разных элементов */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+[contenteditable="true"] {
+    cursor: text !important;
+}
+input[type="text"] ~ .cursor,
+input[type="email"] ~ .cursor,
+input[type="password"] ~ .cursor,
+textarea ~ .cursor,
+[contenteditable="true"] ~ .cursor {
+    display: none !important;
+}
+/* Кнопки и submit */
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+    cursor: none !important;
+}
+/* Выпадающие списки */
+select {
+    cursor: pointer !important;
+}
+select ~ .cursor {
+    display: none !important;
+}
+/* Стандартный указатель для ссылок */
+a {
+    cursor: none !important;
+}
+/* Стиль текстового курсора (полоска) */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+    caret-color: var(--primary-color); /* Цвет мигающей полоски */
+}
+/* Состояния курсора для разных элементов */
+.cursor-pointer {
+    width: 15px;
+    height: 15px;
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+}
+.cursor-text {
+    width: 2px;
+    height: 20px;
+    background-color: var(--primary-color);
+    border-radius: 0;
+}
+.cursor {
+    transition:
+        transform 0.1s ease,
+        width 0.2s ease,
+        height 0.2s ease,
+        background-color 0.2s ease,
+        border-radius 0.2s ease;
+}
+.cursor, .cursor-follower {
+    pointer-events: none !important;
+}

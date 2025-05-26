@@ -1,6 +1,7 @@
 <?php if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 use Bitrix\Main\Page\Asset;
 
+global $USER;
 /** @global CMain $APPLICATION */
 ?>
 <!DOCTYPE html>
@@ -16,6 +17,16 @@ use Bitrix\Main\Page\Asset;
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/style.css");
     Asset::getInstance()->addCss("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css");
     ?>
+
+    <?php
+    if ($USER->IsAdmin()) { ?>
+    <style>
+        .header {
+            position: unset!important;
+        }
+        </style>
+    <?php } ?>
+
 </head>
 <body>
 

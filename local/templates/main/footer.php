@@ -1,11 +1,10 @@
 <?php
-if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
+if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
+
 use Bitrix\Main\Page\Asset;
+
 Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/main.js");
-Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/cursor.js");
 ?>
-<!--<script src="<?php /*=SITE_TEMPLATE_PATH*/?>/js/main.js"></script>
-<script src="<?php /*=SITE_TEMPLATE_PATH*/?>/js/cursor.js"></script>-->
 
 <!-- Подвал -->
 <footer class="footer">
@@ -34,7 +33,7 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/cursor.js");
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; <?=date('Y')?> Ильнур Давлетбаев. Все права защищены.</p>
+            <p>&copy; <?= date('Y') ?> Ильнур Давлетбаев. Все права защищены.</p>
         </div>
     </div>
 </footer>
@@ -56,8 +55,15 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/cursor.js");
     </svg>
     <i class="fas fa-arrow-up"></i>
 </button>
-<div class="cursor"></div>
-<div class="cursor-follower"></div>
+<?php
+global $USER;
+if ($USER->IsAdmin() == false) {
+    Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/cursor.css");
+    Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/cursor.js");
+    ?>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+<?php } ?>
 </body>
 </html>
 

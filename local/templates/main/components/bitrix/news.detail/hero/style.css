@@ -137,10 +137,10 @@
     width: auto;
 }
 
-.tech-icons svg:hover {
+/*.tech-icons svg:hover {
     fill: var(--primary-dark);
     transform: scale(1.2);
-}
+}*/
 
 /* Адаптивность */
 @media (max-width: 992px) {

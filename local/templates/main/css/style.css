@@ -161,47 +161,6 @@ section {
     border-radius: 2px;
 }
 
-/* Секции с навыками */
-.skills-section {
-    background-color: var(--secondary-color);
-}
-
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-}
-
-.skill-card {
-    background-color: var(--dark-color);
-    padding: 30px;
-    border-radius: 10px;
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-    border-bottom: 3px solid transparent;
-}
-
-.skill-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-    border-bottom-color: var(--primary-color);
-}
-
-.skill-icon {
-    font-size: 3rem;
-    color: var(--primary-color);
-    margin-bottom: 20px;
-}
-
-.skill-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-}
-
-.skill-card p {
-    color: var(--gray-color);
-}
-
 /* Сертификаты */
 .certificates-grid {
     display: grid;
@@ -761,9 +720,6 @@ section {
     stroke-dashoffset: 176;
     transition: stroke-dashoffset 0.3s ease;
 }
-
-
-
 
 /* Общие стили для кнопок ошибок */
 .btn-error {

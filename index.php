@@ -2,9 +2,7 @@
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 /** @global CMain $APPLICATION */
 $APPLICATION->SetTitle("Ильнур Давлетбаев");
-?>
-
-<?php
+?><?php
 // Основной блок с информацией
 $APPLICATION->IncludeComponent(
     "bitrix:news.detail",
@@ -66,9 +64,7 @@ $APPLICATION->IncludeComponent(
         "COMPONENT_TEMPLATE" => "hero"
     ),
     false
-); ?>
-
-<?php
+); ?> <?php
 // Блок с видами деятельности
 $APPLICATION->IncludeComponent(
 	"bitrix:news.list",
@@ -141,13 +137,11 @@ $APPLICATION->IncludeComponent(
 	),
 	false
 );
-?>
-
-<?php
+?> <?php
 // Блок с сертификатами
 $APPLICATION->IncludeComponent(
-	"bitrix:news.list", 
-	"main-page-my_certificates", 
+	"bitrix:news.list",
+	"main-page-my_certificates",
 	array(
 		"ACTIVE_DATE_FORMAT" => "",
 		"ADD_SECTIONS_CHAIN" => "N",
@@ -218,75 +212,76 @@ $APPLICATION->IncludeComponent(
 	false
 );
 ?>
+<?php
+// Cases
 
+$APPLICATION->IncludeComponent(
+	"bitrix:catalog.section.list", 
+	"main-page-cases", 
+	array(
+		"ADDITIONAL_COUNT_ELEMENTS_FILTER" => "additionalCountFilter",
+		"ADD_SECTIONS_CHAIN" => "Y",
+		"CACHE_FILTER" => "N",
+		"CACHE_GROUPS" => "Y",
+		"CACHE_TIME" => "36000000",
+		"CACHE_TYPE" => "A",
+		"COUNT_ELEMENTS" => "Y",
+		"COUNT_ELEMENTS_FILTER" => "CNT_ACTIVE",
+		"FILTER_NAME" => "sectionsFilter",
+		"HIDE_SECTIONS_WITH_ZERO_COUNT_ELEMENTS" => "N",
+		"IBLOCK_ID" => "6",
+		"IBLOCK_TYPE" => "lists",
+		"SECTION_CODE" => "",
+		"SECTION_FIELDS" => array(
+			0 => "CODE",
+			1 => "DESCRIPTION",
+			2 => "DETAIL_PICTURE",
+			3 => "IBLOCK_CODE",
+			4 => "",
+		),
+		"SECTION_ID" => $_REQUEST["SECTION_ID"],
+		"SECTION_URL" => "",
+		"SECTION_USER_FIELDS" => array(
+			0 => "UF_CASE_SECTION_ICON",
+			1 => "",
+		),
+		"SHOW_PARENT_NAME" => "Y",
+		"TOP_DEPTH" => "2",
+		"VIEW_MODE" => "LINE",
+		"COMPONENT_TEMPLATE" => "main-page-cases"
+	),
+	false
+);?>
 
-    <!-- Блок с типовыми задачами -->
-    <section id="tasks" class="tasks-section">
-        <div class="container">
-            <h2 class="section-title">Типовые задачи</h2>
-            <div class="tasks-grid">
-                <div class="task-card">
-                    <div class="task-icon">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
-                    <h3>Разработка сайтов</h3>
-                    <p>Создание корпоративных сайтов, лендингов и интернет-магазинов.</p>
-                </div>
-                <div class="task-card">
-                    <div class="task-icon">
-                        <i class="fas fa-server"></i>
-                    </div>
-                    <h3>Настройка серверов</h3>
-                    <p>Развертывание и оптимизация веб-серверов (Nginx, Apache).</p>
-                </div>
-                <div class="task-card">
-                    <div class="task-icon">
-                        <i class="fas fa-bug"></i>
-                    </div>
-                    <h3>Исправление ошибок</h3>
-                    <p>Диагностика и устранение проблем в существующих проектах.</p>
-                </div>
-            </div>
-            <div class="text-center">
-                <a href="tasks.html" class="btn btn-outline">Все услуги</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Блок с контактами и формой -->
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <h2 class="section-title">Свяжитесь со мной</h2>
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h3>Контактная информация</h3>
-                    <ul>
-                        <li><i class="fas fa-envelope"></i> ivan@example.com</li>
-                        <li><i class="fas fa-phone"></i> +7 (123) 456-78-90</li>
-                        <li><i class="fas fa-map-marker-alt"></i> Москва, Россия</li>
-                    </ul>
-                    <div class="contact-social">
-                        <a href="#"><i class="fab fa-github"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-telegram"></i></a>
-                        <a href="#"><i class="fab fa-vk"></i></a>
-                    </div>
-                </div>
-                <div class="contact-form" data-cursor-hover>
-                    <form id="feedback-form">
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Ваше имя" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Ваш email" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" name="message" placeholder="Ваше сообщение" required></textarea>
-                        </div>
-                        <button type="submit" class="btn">Отправить</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-<?php require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php");
+<!-- Блок с контактами и формой --> <section id="contact" class="contact-section">
+<div class="container">
+	<h2 class="section-title">Свяжитесь со мной</h2>
+	<div class="contact-grid">
+		<div class="contact-info">
+			<h3>Контактная информация</h3>
+			<ul>
+				<li><i class="fas fa-envelope"></i> <a href="mailto:ivan@example.com">ivan@example.com</a></li>
+				<li><i class="fas fa-phone"></i> +7 (123) 456-78-90</li>
+				<li><i class="fas fa-map-marker-alt"></i> Москва, Россия</li>
+			</ul>
+			<div class="contact-social">
+ <a href="#"><i class="fab fa-github"></i></a> <a href="#"><i class="fab fa-linkedin"></i></a> <a href="#"><i class="fab fa-telegram"></i></a> <a href="#"><i class="fab fa-vk"></i></a>
+			</div>
+		</div>
+		<div class="contact-form" data-cursor-hover="">
+			<form id="feedback-form">
+				<div class="form-group">
+ <input type="text" id="name" name="name" placeholder="Ваше имя" required="">
+				</div>
+				<div class="form-group">
+ <input type="email" id="email" name="email" placeholder="Ваш email" required="">
+				</div>
+				<div class="form-group">
+ <textarea id="message" name="message" placeholder="Ваше сообщение" required=""></textarea>
+				</div>
+ <button type="submit" class="btn">Отправить</button>
+			</form>
+		</div>
+	</div>
+</div>
+ </section> <br>

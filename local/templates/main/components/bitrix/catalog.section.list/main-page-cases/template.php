@@ -19,7 +19,7 @@ $this->setFrameMode(true);
 ?>
 <section id="tasks" class="tasks-section">
     <div class="container">
-        <h2 class="section-title">Типовые задачи</h2>
+        <h2 class="section-title"><?=$arResult['IBLOCK']['NAME']?></h2>
         <div class="tasks-grid">
             <?php foreach ($arResult['SECTIONS'] as $arSection) { ?>
             <div class="task-card">
@@ -34,7 +34,7 @@ $this->setFrameMode(true);
             <?php } ?>
         </div>
         <div class="text-center">
-            <a href="/<?=$arResult['SECTIONS'][0]['IBLOCK_CODE']?>/"
+            <a href="/<?=$$arResult['IBLOCK']['CODE']?>/"
                class="btn btn-outline">
                 <?= Loc::getMessage('GO_TO_CASES_LINk')?>
             </a>

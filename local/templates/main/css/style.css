@@ -173,7 +173,7 @@ section {
     position: relative;
     border-radius: 10px;
     overflow: hidden;
-    height: 250px;
+    height: 360px;
     transition: transform 0.3s;
 }
 
@@ -627,6 +627,9 @@ section {
 
     .contact-grid {
         grid-template-columns: 1fr;
+    }
+    .certificate-mp-card {
+        height: 320px;
     }
 }
 

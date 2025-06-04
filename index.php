@@ -216,8 +216,8 @@ $APPLICATION->IncludeComponent(
 // Cases
 
 $APPLICATION->IncludeComponent(
-	"bitrix:catalog.section.list", 
-	"main-page-cases", 
+	"bitrix:catalog.section.list",
+	"main-page-cases",
 	array(
 		"ADDITIONAL_COUNT_ELEMENTS_FILTER" => "additionalCountFilter",
 		"ADD_SECTIONS_CHAIN" => "Y",
@@ -285,3 +285,4 @@ $APPLICATION->IncludeComponent(
 	</div>
 </div>
  </section> <br>
+<?php require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php");

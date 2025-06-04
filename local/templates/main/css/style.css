@@ -44,7 +44,7 @@ body {
 /* Шапка */
 .header {
     background-color: rgba(26, 32, 44, 0.9);
-    position: fixed;
+    /*position: fixed;*/
     width: 100%;
     top: 0;
     left: 0;

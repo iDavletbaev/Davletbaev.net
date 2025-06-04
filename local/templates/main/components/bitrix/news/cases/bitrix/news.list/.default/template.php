@@ -1,0 +1,111 @@
+<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
+/** @var array $arParams */
+/** @var array $arResult */
+/** @global CMain $APPLICATION */
+/** @global CUser $USER */
+/** @global CDatabase $DB */
+/** @var CBitrixComponentTemplate $this */
+/** @var string $templateName */
+/** @var string $templateFile */
+/** @var string $templateFolder */
+/** @var string $componentPath */
+/** @var CBitrixComponent $component */
+$this->setFrameMode(true);
+?>
+
+<main class="cases-page">
+    <div class="container">
+        <div class="page-header">
+            <h1 class="page-title">Мои кейсы</h1>
+            <p class="page-subtitle">Реализованные проекты и успешные решения</p>
+        </div>
+
+        <div class="cases-categories">
+            <button class="category-btn active" data-category="all">Все</button>
+            <button class="category-btn" data-category="web">Веб-сайты</button>
+            <button class="category-btn" data-category="app">Приложения</button>
+            <button class="category-btn" data-category="ecommerce">Интернет-магазины</button>
+            <button class="category-btn" data-category="optimization">Оптимизация</button>
+        </div>
+
+        <div class="cases-grid">
+            <!-- Кейс 1 -->
+            <article class="case-card" data-category="web" data-case="1">
+                <div class="case-card-image">
+                    <img src="images/cases/web-project.jpg" alt="Корпоративный сайт">
+                    <span class="case-category">Веб-сайты</span>
+                </div>
+                <div class="case-card-content">
+                    <div class="case-meta">
+                        <span class="case-date"><i class="far fa-calendar"></i> Январь 2023</span>
+                        <span class="case-duration"><i class="far fa-clock"></i> 3 недели</span>
+                    </div>
+                    <h3 class="case-title">Корпоративный сайт для ООО "ТехноПром"</h3>
+                    <p class="case-excerpt">Разработка современного адаптивного сайта с системой управления контентом...</p>
+                    <button class="case-read-more">Подробнее <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </article>
+
+            <!-- Кейс 2 -->
+            <article class="case-card" data-category="ecommerce" data-case="2">
+                <div class="case-card-image">
+                    <img src="images/cases/ecommerce-project.jpg" alt="Интернет-магазин">
+                    <span class="case-category">Интернет-магазины</span>
+                </div>
+                <div class="case-card-content">
+                    <div class="case-meta">
+                        <span class="case-date"><i class="far fa-calendar"></i> Март 2023</span>
+                        <span class="case-duration"><i class="far fa-clock"></i> 6 недель</span>
+                    </div>
+                    <h3 class="case-title">Интернет-магазин мебели "Домовой"</h3>
+                    <p class="case-excerpt">Полный цикл разработки интернет-магазина с интеграцией платежной системы...</p>
+                    <button class="case-read-more">Подробнее <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </article>
+
+            <!-- Другие кейсы -->
+        </div>
+
+        <div class="cases-pagination">
+            <a href="#" class="pagination-btn active">1</a>
+            <a href="#" class="pagination-btn">2</a>
+            <a href="#" class="pagination-btn">3</a>
+            <a href="#" class="pagination-btn">Следующая <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</main>
+
+<div id="case-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div class="modal-case-content">
+            <div class="case-slider">
+                <img src="" alt="" class="active-slide" id="modal-case-image">
+                <div class="case-thumbnails" id="case-thumbnails">
+                    <!-- Миниатюры будут добавляться через JS -->
+                </div>
+            </div>
+            <div class="case-details">
+                <h2 id="modal-case-title"></h2>
+                <div class="case-meta-modal">
+                    <span id="modal-case-date"></span>
+                    <span id="modal-case-duration"></span>
+                    <span id="modal-case-category"></span>
+                </div>
+                <div class="case-description" id="modal-case-description"></div>
+
+                <div class="case-tech">
+                    <h3>Использованные технологии:</h3>
+                    <div class="tech-tags" id="modal-case-tech"></div>
+                </div>
+
+                <div class="case-results">
+                    <h3>Результаты:</h3>
+                    <ul class="results-list" id="modal-case-results"></ul>
+                </div>
+
+                <a href="#" class="btn" id="case-visit-btn">Посетить сайт</a>
+            </div>
+        </div>
+    </div>
+</div>

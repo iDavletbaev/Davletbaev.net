@@ -9,14 +9,14 @@ $aMenuLinks = Array(
 	),
 	Array(
 		"Навыки",
-		"#skills",
+		"/#skills",
 		Array(),
 		Array(),
 		""
 	),
 	Array(
 		"Сертификаты",
-		"#certificates",
+		"/#certificates",
 		Array(),
 		Array(),
 		""
@@ -37,7 +37,7 @@ $aMenuLinks = Array(
 	),
 	Array(
 		"Контакты",
-		"#contact",
+		"/#contact",
 		Array(),
 		Array(),
 		""

@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    console.debug('dsdcs')
+
     // Фильтрация кейсов (остается как было)
     const categoryButtons = document.querySelectorAll('.category-btn');
     const caseCards = document.querySelectorAll('.case-card');
@@ -72,6 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 return response.json();
             })
             .then(data => {
+                console.debug('data', data);
                 // Заполняем модальное окно полученными данными
                 renderCaseModal(data);
             })
@@ -132,11 +133,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Заполняем результаты
         const resultsContainer = document.getElementById('modal-case-results');
-        data.results.forEach(result => {
-            const li = document.createElement('li');
-            li.textContent = result;
-            resultsContainer.appendChild(li);
-        });
+            const p = document.createElement('p');
+            p.textContent = data.results;
+            resultsContainer.appendChild(p);
 
         // Заполняем галерею изображений
         const thumbnailsContainer = document.getElementById('case-thumbnails');

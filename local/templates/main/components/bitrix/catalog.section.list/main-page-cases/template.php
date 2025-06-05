@@ -34,7 +34,7 @@ $this->setFrameMode(true);
             <?php } ?>
         </div>
         <div class="text-center">
-            <a href="/<?=$$arResult['IBLOCK']['CODE']?>/"
+            <a href="/<?=$arResult['IBLOCK']['CODE']?>/"
                class="btn btn-outline">
                 <?= Loc::getMessage('GO_TO_CASES_LINk')?>
             </a>

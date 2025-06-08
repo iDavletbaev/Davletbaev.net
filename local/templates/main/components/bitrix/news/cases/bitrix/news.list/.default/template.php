@@ -1,4 +1,4 @@
-<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
+<? if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 /** @var array $arParams */
 /** @var array $arResult */
 /** @global CMain $APPLICATION */
@@ -11,59 +11,57 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
+
+use Bitrix\Main\Localization\Loc;
+
+$sections = array();
+//d($sections);
 ?>
 
 <main class="cases-page">
     <div class="container">
         <div class="page-header">
-            <h1 class="page-title">Мои кейсы</h1>
-            <p class="page-subtitle">Реализованные проекты и успешные решения</p>
+            <h1 class="page-title"><?=$arResult['NAME']?></h1>
+            <p class="page-subtitle"><?=$arResult['~DESCRIPTION']?></p>
         </div>
 
-        <div class="cases-categories">
-            <button class="category-btn active" data-category="all">Все</button>
-            <button class="category-btn" data-category="web">Веб-сайты</button>
-            <button class="category-btn" data-category="app">Приложения</button>
-            <button class="category-btn" data-category="ecommerce">Интернет-магазины</button>
-            <button class="category-btn" data-category="optimization">Оптимизация</button>
-        </div>
+        <?php $APPLICATION->ShowViewContent('case-filter');?>
 
         <div class="cases-grid">
-            <!-- Кейс 1 -->
-            <article class="case-card" data-category="web" data-case="1">
-                <div class="case-card-image">
-                    <img src="images/cases/web-project.jpg" alt="Корпоративный сайт">
-                    <span class="case-category">Веб-сайты</span>
-                </div>
-                <div class="case-card-content">
-                    <div class="case-meta">
-                        <span class="case-date"><i class="far fa-calendar"></i> Январь 2023</span>
-                        <span class="case-duration"><i class="far fa-clock"></i> 3 недели</span>
+            <?php foreach ($arResult['ITEMS'] as $arItem) {
+                $sections[] = $arItem['SECTION_DATA'];
+                ?>
+                <article class="case-card"
+                         data-category="<?= $arItem['IBLOCK_SECTION_ID'] ?>"
+                         data-case="<?= $arItem['ID'] ?>"
+                >
+                    <div class="case-card-image">
+                        <?php if (isset($arItem['PREVIEW_PICTURE']['SRC'])) { ?>
+                            <img src="<?= $arItem['PREVIEW_PICTURE']['SRC'] ?>"
+                                 alt="<?= $arItem['PREVIEW_PICTURE']['ALT'] ?>"
+                            >
+                        <?php } ?>
+                        <span class="case-category"><?= $arItem['SECTION_DATA']['NAME'] ?></span>
                     </div>
-                    <h3 class="case-title">Корпоративный сайт для ООО "ТехноПром"</h3>
-                    <p class="case-excerpt">Разработка современного адаптивного сайта с системой управления контентом...</p>
-                    <button class="case-read-more">Подробнее <i class="fas fa-arrow-right"></i></button>
-                </div>
-            </article>
-
-            <!-- Кейс 2 -->
-            <article class="case-card" data-category="ecommerce" data-case="2">
-                <div class="case-card-image">
-                    <img src="images/cases/ecommerce-project.jpg" alt="Интернет-магазин">
-                    <span class="case-category">Интернет-магазины</span>
-                </div>
-                <div class="case-card-content">
-                    <div class="case-meta">
-                        <span class="case-date"><i class="far fa-calendar"></i> Март 2023</span>
-                        <span class="case-duration"><i class="far fa-clock"></i> 6 недель</span>
+                    <div class="case-card-content">
+                        <div class="case-meta">
+                            <span class="case-date"><i class="far fa-calendar"></i> Январь 2023</span>
+                            <span class="case-duration"><i class="far fa-clock"></i> 3 недели</span>
+                        </div>
+                        <h3 class="case-title"><?= $arItem['NAME'] ?></h3>
+                        <p class="case-excerpt">
+                            <?php if (isset($arItem['~PREVIEW_TEXT'])) {
+                                echo $arItem['~PREVIEW_TEXT'];
+                            } ?>
+                        </p>
+                        <button class="btn case-read-more">
+                            <?= Loc::getMessage('CASES_MODAL') ?>
+                            <!-- <i class="fas fa-arrow-right"></i>-->
+                        </button>
                     </div>
-                    <h3 class="case-title">Интернет-магазин мебели "Домовой"</h3>
-                    <p class="case-excerpt">Полный цикл разработки интернет-магазина с интеграцией платежной системы...</p>
-                    <button class="case-read-more">Подробнее <i class="fas fa-arrow-right"></i></button>
-                </div>
-            </article>
+                </article>
+            <?php } ?>
 
-            <!-- Другие кейсы -->
         </div>
 
         <div class="cases-pagination">
@@ -74,6 +72,17 @@ $this->setFrameMode(true);
         </div>
     </div>
 </main>
+
+<?php $this->SetViewTarget('case-filter'); ?>
+<div class="cases-categories">
+    <button class="category-btn active" data-category="all">Все</button>
+    <?php foreach ($sections as $section) { ?>
+        <button class="category-btn" data-category="<?= $section['ID'] ?>">
+            <?= $section['NAME'] ?>
+        </button>
+    <?php } ?>
+</div>
+<?php $this->EndViewTarget(); ?>
 
 <div id="case-modal" class="modal">
     <div class="modal-content">

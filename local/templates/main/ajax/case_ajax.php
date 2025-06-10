@@ -1,5 +1,12 @@
 <?php
-header('Content-Type: application/json');
+//if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
+//header('Content-Type: application/json');
+
+/*if ($_REQUEST['id']) {
+//    \Bitrix\Main\Loader::includeModule('iblock');
+
+    echo json_encode($_REQUEST);
+}*/
 
 // Демо данные
 $case = array(

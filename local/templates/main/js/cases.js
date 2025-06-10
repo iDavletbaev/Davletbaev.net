@@ -64,7 +64,6 @@ document.addEventListener('DOMContentLoaded', function() {
         `;
 
         // AJAX-запрос
-        console.debug('caseId', caseId);
         fetch(`/local/templates/main/ajax/case_ajax.php?id=${caseId}`)
             .then(response => {
                 if (!response.ok) {

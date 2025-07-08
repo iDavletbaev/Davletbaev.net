@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<items hlblockUid="DavletbaevData" exchangeVersion="2" >
+<item>
+ <field name="UF_DAV_NAME">
+  <value>Email</value>
+ </field>
+ <field name="UF_DAV_VALUE">
+  <value>ilnur@davletbaev.net</value>
+ </field>
+ <field name="UF_DAV_TYPE">
+  <value>email</value>
+ </field>
+</item>
+<item>
+ <field name="UF_DAV_NAME">
+  <value>Telegram</value>
+ </field>
+ <field name="UF_DAV_VALUE">
+  <value>https://t.me/IlnurD</value>
+ </field>
+ <field name="UF_DAV_TYPE">
+  <value>telegram</value>
+ </field>
+</item>
+<item>
+ <field name="UF_DAV_NAME">
+  <value>GitHub</value>
+ </field>
+ <field name="UF_DAV_VALUE">
+  <value>https://github.com/iDavletbaev</value>
+ </field>
+ <field name="UF_DAV_TYPE">
+  <value>github</value>
+ </field>
+</item>
+<item>
+ <field name="UF_DAV_NAME">
+  <value>LinkedIn</value>
+ </field>
+ <field name="UF_DAV_VALUE">
+  <value>https://www.linkedin.com/in/ilnur-davletbaev/</value>
+ </field>
+ <field name="UF_DAV_TYPE">
+  <value>linkedin</value>
+ </field>
+</item>
+<item>
+ <field name="UF_DAV_NAME">
+  <value>Name</value>
+ </field>
+ <field name="UF_DAV_VALUE">
+  <value>Ильнур Давлетбаев</value>
+ </field>
+ <field name="UF_DAV_TYPE">
+  <value>myname</value>
+ </field>
+</item>
+
+</items>

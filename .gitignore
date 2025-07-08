@@ -7,6 +7,7 @@
 /bitrix/updates*
 /bitrix/.settings.php
 /bitrix/php_interface/dbconn.php
+/bitrix/tmp*
 
 /upload/*
 
@@ -16,4 +17,6 @@
 /local/composer.lock
 /local/vendor/
 /local/composer.lock
+
+*.log
 *log.txt

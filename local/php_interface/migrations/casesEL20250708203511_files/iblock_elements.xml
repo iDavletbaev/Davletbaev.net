@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<items iblockUid="lists:cases" exchangeVersion="2" >
+<item>
+ <field name="ACTIVE">
+  <value>Y</value>
+ </field>
+ <field name="ACTIVE_FROM"/>
+ <field name="ACTIVE_TO"/>
+ <field name="SORT">
+  <value>500</value>
+ </field>
+ <field name="NAME">
+  <value>dfvdfv</value>
+ </field>
+ <field name="PREVIEW_PICTURE">
+  <value name="800x450.webp" type="file">iblock/bf8/bhao0gzw47y1thvbfe21tyf29j4vketr.webp</value>
+ </field>
+ <field name="PREVIEW_TEXT">
+  <value><![CDATA[$arItem['~PREVIEW_TEXT']$arItem['~PREVIEW_ TEXT']$arItem['~PREVI
+<p>
+	EW_TEXT']$arItem['~PREVIEW_TEXT']
+</p>]]></value>
+ </field>
+ <field name="PREVIEW_TEXT_TYPE">
+  <value>html</value>
+ </field>
+ <field name="DETAIL_PICTURE">
+  <value name="800x450.webp" type="file">iblock/bf8/bhao0gzw47y1thvbfe21tyf29j4vketr.webp</value>
+ </field>
+ <field name="DETAIL_TEXT"/>
+ <field name="DETAIL_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="CODE"/>
+ <field name="TAGS"/>
+ <field name="XML_ID">
+  <value>16</value>
+ </field>
+ <field name="IBLOCK_SECTION">
+  <value section_depth_level="1" section_code="development">Разработка сайтов</value>
+ </field>
+ <field name="IPROPERTY_TEMPLATES"/>
+</item>
+<item>
+ <field name="ACTIVE">
+  <value>Y</value>
+ </field>
+ <field name="ACTIVE_FROM"/>
+ <field name="ACTIVE_TO"/>
+ <field name="SORT">
+  <value>500</value>
+ </field>
+ <field name="NAME">
+  <value>23423423</value>
+ </field>
+ <field name="PREVIEW_PICTURE"/>
+ <field name="PREVIEW_TEXT"/>
+ <field name="PREVIEW_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="DETAIL_PICTURE"/>
+ <field name="DETAIL_TEXT"/>
+ <field name="DETAIL_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="CODE"/>
+ <field name="TAGS"/>
+ <field name="XML_ID">
+  <value>17</value>
+ </field>
+ <field name="IBLOCK_SECTION">
+  <value section_depth_level="1" section_code="support">Поддержка сайтов</value>
+ </field>
+ <field name="IPROPERTY_TEMPLATES"/>
+</item>
+<item>
+ <field name="ACTIVE">
+  <value>Y</value>
+ </field>
+ <field name="ACTIVE_FROM"/>
+ <field name="ACTIVE_TO"/>
+ <field name="SORT">
+  <value>500</value>
+ </field>
+ <field name="NAME">
+  <value>vn vcvc</value>
+ </field>
+ <field name="PREVIEW_PICTURE">
+  <value name="800x450.webp" type="file">iblock/bf8/bhao0gzw47y1thvbfe21tyf29j4vketr.webp</value>
+ </field>
+ <field name="PREVIEW_TEXT">
+  <value>Anounce! Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cumque cupiditate debitis deleniti dolorem dolores eos&#13;
+    excepturi, illo ipsam maxime minima nostrum nulla quam quod recusandae similique sit suscipit vitae!</value>
+ </field>
+ <field name="PREVIEW_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="DETAIL_PICTURE"/>
+ <field name="DETAIL_TEXT">
+  <value><![CDATA[Detail!<br>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab animi beatae consequuntur, doloremque facilis, illum&lt;br&gt;&nbsp; &nbsp; impedit obcaecati porro quas saepe sed suscipit velit. Delectus explicabo ipsam ipsum maxime quod rem!<br>
+<ul>
+	<li>dcsdcds</li>
+	<li>sdcsdc</li>
+	<li>dscsdc</li>
+</ul>]]></value>
+ </field>
+ <field name="DETAIL_TEXT_TYPE">
+  <value>html</value>
+ </field>
+ <field name="CODE"/>
+ <field name="TAGS"/>
+ <field name="XML_ID">
+  <value>18</value>
+ </field>
+ <field name="IBLOCK_SECTION">
+  <value section_depth_level="1" section_code="servers">Настройка серверов</value>
+ </field>
+ <field name="IPROPERTY_TEMPLATES"/>
+</item>
+
+</items>

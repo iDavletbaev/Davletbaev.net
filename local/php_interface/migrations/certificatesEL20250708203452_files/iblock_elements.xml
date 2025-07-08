@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<items iblockUid="lists:certificates" exchangeVersion="2" >
+<item>
+ <field name="ACTIVE">
+  <value>Y</value>
+ </field>
+ <field name="ACTIVE_FROM"/>
+ <field name="ACTIVE_TO"/>
+ <field name="SORT">
+  <value>10</value>
+ </field>
+ <field name="NAME">
+  <value>Интеграция дизайна и настройка платформы</value>
+ </field>
+ <field name="PREVIEW_PICTURE">
+  <value name="&#x418;&#x43D;&#x442;&#x435;&#x433;&#x440;&#x430;&#x446;&#x438;&#x44F; &#x434;&#x438;&#x437;&#x430;&#x438;&#x306;&#x43D;&#x430; &#x438; &#x43D;&#x430;&#x441;&#x442;&#x440;&#x43E;&#x438;&#x306;&#x43A;&#x430; &#x43F;&#x43B;&#x430;&#x442;&#x444;&#x43E;&#x440;&#x43C;&#x44B;.jpg" type="file">iblock/9a6/59fn8nz3juqs0oyknmte63bdef1wzpz2.jpg</value>
+ </field>
+ <field name="PREVIEW_TEXT"/>
+ <field name="PREVIEW_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="DETAIL_PICTURE"/>
+ <field name="DETAIL_TEXT"/>
+ <field name="DETAIL_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="CODE"/>
+ <field name="TAGS"/>
+ <field name="XML_ID">
+  <value>14</value>
+ </field>
+ <field name="IBLOCK_SECTION">
+  <value section_depth_level="1" section_code="1c-bitrix">1С-Битрикс</value>
+ </field>
+ <field name="IPROPERTY_TEMPLATES"/>
+</item>
+<item>
+ <field name="ACTIVE">
+  <value>Y</value>
+ </field>
+ <field name="ACTIVE_FROM"/>
+ <field name="ACTIVE_TO"/>
+ <field name="SORT">
+  <value>20</value>
+ </field>
+ <field name="NAME">
+  <value>Внедрение Битрикс24: Основные настройки системы</value>
+ </field>
+ <field name="PREVIEW_PICTURE">
+  <value name="&#x412;&#x43D;&#x435;&#x434;&#x440;&#x435;&#x43D;&#x438;&#x435; &#x411;&#x438;&#x442;&#x440;&#x438;&#x43A;&#x441;24 &#x41E;&#x441;&#x43D;&#x43E;&#x432;&#x43D;&#x44B;&#x435; &#x43D;&#x430;&#x441;&#x442;&#x440;&#x43E;&#x438;&#x306;&#x43A;&#x438; &#x441;&#x438;&#x441;&#x442;&#x435;&#x43C;&#x44B;.jpg" type="file">iblock/69d/gdsa2hodx4fxl5a40rnzd5ceiyin53ge.jpg</value>
+ </field>
+ <field name="PREVIEW_TEXT"/>
+ <field name="PREVIEW_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="DETAIL_PICTURE"/>
+ <field name="DETAIL_TEXT"/>
+ <field name="DETAIL_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="CODE"/>
+ <field name="TAGS"/>
+ <field name="XML_ID">
+  <value>15</value>
+ </field>
+ <field name="IBLOCK_SECTION">
+  <value section_depth_level="1" section_code="1c-bitrix">1С-Битрикс</value>
+ </field>
+ <field name="IPROPERTY_TEMPLATES"/>
+</item>
+
+</items>

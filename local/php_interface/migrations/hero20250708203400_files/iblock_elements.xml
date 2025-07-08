@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<items iblockUid="blocks:hero" exchangeVersion="2" >
+<item>
+ <field name="ACTIVE">
+  <value>Y</value>
+ </field>
+ <field name="ACTIVE_FROM"/>
+ <field name="ACTIVE_TO"/>
+ <field name="SORT">
+  <value>500</value>
+ </field>
+ <field name="NAME">
+  <value>Ильнур Давлетбаев</value>
+ </field>
+ <field name="PREVIEW_PICTURE"/>
+ <field name="PREVIEW_TEXT">
+  <value>Веб-разработчик</value>
+ </field>
+ <field name="PREVIEW_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="DETAIL_PICTURE"/>
+ <field name="DETAIL_TEXT">
+  <value>Создаю современные, адаптивные и высокопроизводительные веб-приложения. Более 510 лет опыта в разработке сложных интернет-решений. </value>
+ </field>
+ <field name="DETAIL_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="CODE"/>
+ <field name="TAGS"/>
+ <field name="XML_ID">
+  <value>7</value>
+ </field>
+ <field name="IBLOCK_SECTION"/>
+ <field name="IPROPERTY_TEMPLATES"/>
+ <property name="PHOTOS">
+  <value name="ava2.jpg" type="file">iblock/70e/o4mw68tef1pzv8ydohr0l0wb5jntokl4.jpg</value>
+  <value name="ava.jpg" type="file">iblock/84a/0xdwllrfb9qut2v26212ln55wbkai6uz.jpg</value>
+ </property>
+ <property name="BACK_PHOTOS">
+  <value name="skaly_gory_sklon_182976_1920x1080.jpg" type="file">iblock/3b5/qhdkwwnyap0e2rvblkc4rbk2tq9mrnr4.jpg</value>
+  <value name="bereg_voda_zakat_202389_3840x2400.jpg" type="file">iblock/2f8/diibmabviq2d52lhq6bmngla1b2j5uof.jpg</value>
+ </property>
+ <property name="CONTACT_BTN">
+  <value description="/#contact">Связаться</value>
+ </property>
+ <property name="SECOND_BTN">
+  <value description="/#certificates">Сертификаты</value>
+ </property>
+ <property name="TECH_ICONS">
+  <value text-type="TEXT" description="1C-&#x411;&#x438;&#x442;&#x440;&#x438;&#x43A;&#x441;"><![CDATA[<svg xmlns="http://www.w3.org/2000/svg" width="149" height="150" viewBox="0 0 149 149"><path d="M60.086 148.277c-13.027-2.695-25.18-8.714-34.72-17.187C.872 109.336-6.698 75.16 6.243 44.75c3.176-7.465 8.344-15.043 14.742-21.63l5.645-5.804.397 33.973c.38 32.52.465 34.16 2.004 38.257 3.08 8.195 6.376 13.418 12.056 19.074 14.672 14.61 36.19 18.255 54.484 9.23 17.196-8.483 28.035-26.93 26.778-45.557-.848-12.516-5.055-21.69-14.14-30.836-6.872-6.914-14.958-11.43-23.76-13.273-8.952-1.872-8.522-2.15-8.522 5.433v6.543l4.906.903c19.012 3.503 31.586 22.175 27.625 41.015-1.266 6.016-4.09 11.332-8.62 16.227-6.888 7.437-16.575 10.992-25.036 10.976-13.99-.026-25.67-7.975-31.33-19.73 0 0-1.486-3.363-1.962-5.437-2.805-12.21-1.012-37.918-1.012-37.918l-.22-37.582 2.22-1.148c1.223-.633 2.39-1.15 2.6-1.15.213 0 .478 17.263.595 38.365 0 0-2.694 27.656.638 38.254.48 1.53 1.39 4.148 1.39 4.148 2.92 5.945 7.598 11.176 13.677 14.055 4.613 2.187 6.937 3.175 13.76 3.175 4.462 0 8.415-1.41 12.958-3.5 5.36-2.464 11.508-9 13.782-14.964 6.257-16.442-2.457-34.13-19.247-39.06-6.863-2.015-6.722-2.128-6.722 5.333v6.52l3.293.883c11.874 3.176 15.495 19.09 6.175 27.266-3.293 2.89-6.262 4.167-11.454 4.167-5.545 0-10.87-3.36-13.608-8.508-1.64-3.095-1.78-6.028-1.78-7.37 0-12.416-.27-34.74-.27-34.74L58.06 2.047l1.707-.422c.937-.234 4.726-.81 8.418-1.28 12.53-1.6 31.062 2.5 43.515 9.624 16.977 9.715 29.82 26.398 35.168 45.683 1.84 6.633 2.043 8.563 2.043 19.235 0 10.625-.206 12.617-2.007 19.105-7.273 26.21-25.777 44.95-52.234 52.895-5.57 1.672-8.177 1.992-18.005 2.2-7.926.17-13.066-.083-16.578-.81m0 0" style="stroke: none; fill-rule: nonzero; fill: rgb(0, 200, 0); fill-opacity: 1;"/></svg>]]></value>
+  <value text-type="TEXT" description="PHP"><![CDATA[<svg viewBox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"><path d="M320 104.5c171.4 0 303.2 72.2 303.2 151.5S491.3 407.5 320 407.5c-171.4 0-303.2-72.2-303.2-151.5S148.7 104.5 320 104.5m0-16.8C143.3 87.7 0 163 0 256s143.3 168.3 320 168.3S640 349 640 256 496.7 87.7 320 87.7zM218.2 242.5c-7.9 40.5-35.8 36.3-70.1 36.3l13.7-70.6c38 0 63.8-4.1 56.4 34.3zM97.4 350.3h36.7l8.7-44.8c41.1 0 66.6 3 90.2-19.1 26.1-24 32.9-66.7 14.3-88.1-9.7-11.2-25.3-16.7-46.5-16.7h-70.7L97.4 350.3zm185.7-213.6h36.5l-8.7 44.8c31.5 0 60.7-2.3 74.8 10.7 14.8 13.6 7.7 31-8.3 113.1h-37c15.4-79.4 18.3-86 12.7-92-5.4-5.8-17.7-4.6-47.4-4.6l-18.8 96.6h-36.5l32.7-168.6zM505 242.5c-8 41.1-36.7 36.3-70.1 36.3l13.7-70.6c38.2 0 63.8-4.1 56.4 34.3zM384.2 350.3H421l8.7-44.8c43.2 0 67.1 2.5 90.2-19.1 26.1-24 32.9-66.7 14.3-88.1-9.7-11.2-25.3-16.7-46.5-16.7H417l-32.8 168.7z"/></svg>]]></value>
+  <value text-type="TEXT" description="JS"><![CDATA[<svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M0 32v448h448V32H0zm243.8 349.4c0 43.6-25.6 63.5-62.9 63.5-33.7 0-53.2-17.4-63.2-38.5l34.3-20.7c6.6 11.7 12.6 21.6 27.1 21.6 13.8 0 22.6-5.4 22.6-26.5V237.7h42.1v143.7zm99.6 63.5c-39.1 0-64.4-18.6-76.7-43l34.3-19.8c9 14.7 20.8 25.6 41.5 25.6 17.4 0 28.6-8.7 28.6-20.8 0-14.4-11.4-19.5-30.7-28l-10.5-4.5c-30.4-12.9-50.5-29.2-50.5-63.5 0-31.6 24.1-55.6 61.6-55.6 26.8 0 46 9.3 59.8 33.7L368 290c-7.2-12.9-15-18-27.1-18-12.3 0-20.1 7.8-20.1 18 0 12.6 7.8 17.7 25.9 25.6l10.5 4.5c35.8 15.3 55.9 31 55.9 66.2 0 37.8-29.8 58.6-69.7 58.6z"/></svg>]]></value>
+  <value text-type="TEXT" description="HTML5"><![CDATA[<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M0 32l34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1l-4.4 47.7z"/></svg>]]></value>
+  <value text-type="TEXT" description="CSS3"><![CDATA[<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M0 32l34.9 395.8L192 480l157.1-52.2L384 32H0zm313.1 80l-4.8 47.3L193 208.6l-.3 .1h111.5l-12.8 146.6-98.2 28.7-98.8-29.2-6.4-73.9h48.9l3.2 38.3 52.6 13.3 54.7-15.4 3.7-61.6-166.3-.5v-.1l-.2 .1-3.6-46.3L193.1 162l6.5-2.7H76.7L70.9 112h242.2z"/></svg>]]></value>
+  <value text-type="TEXT" description="GIT"><![CDATA[<svg class="bi bi-git" fill="currentColor" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.031 1.031 0 0 0 0-1.457"/></svg>]]></value>
+ </property>
+</item>
+
+</items>

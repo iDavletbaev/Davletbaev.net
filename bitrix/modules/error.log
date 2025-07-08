@@ -1,0 +1,139 @@
+2025-05-13 16:43:17 - Host: localhost - UNCAUGHT_EXCEPTION - [Error] 
+Failed opening required '/var/www/bitrix' (include_path='.:/usr/share/php') (0)
+/var/www/bitrix/bitrix/modules/main/start.php:38
+#0: require_once
+	/var/www/bitrix/bitrix/modules/main/include.php:14
+#1: require_once(string)
+	/var/www/bitrix/bitrix/modules/main/include/prolog_before.php:19
+#2: require_once(string)
+	/var/www/bitrix/bitrix/modules/main/include/prolog.php:10
+#3: require_once(string)
+	/var/www/bitrix/bitrix/header.php:1
+#4: require(string)
+	/var/www/bitrix/index.php:2
+----------
+
+2025-05-13 16:46:27 - Host: localhost - UNCAUGHT_EXCEPTION - [Bitrix\Main\NotSupportedException] 
+redis extension is not loaded. (150)
+/var/www/bitrix/bitrix/modules/main/lib/data/configurator/redisconnectionconfigurator.php:17
+#0: Bitrix\Main\Data\Configurator\RedisConnectionConfigurator->__construct
+	/var/www/bitrix/bitrix/modules/main/lib/data/redisconnection.php:20
+#1: Bitrix\Main\Data\RedisConnection->__construct
+	/var/www/bitrix/bitrix/modules/main/lib/data/connectionpool.php:63
+#2: Bitrix\Main\Data\ConnectionPool->createConnection
+	/var/www/bitrix/bitrix/modules/main/lib/data/connectionpool.php:88
+#3: Bitrix\Main\Data\ConnectionPool->getConnection
+	/var/www/bitrix/bitrix/modules/main/lib/session/handlers/redissessionhandler.php:116
+#4: Bitrix\Main\Session\Handlers\RedisSessionHandler->createConnection
+	/var/www/bitrix/bitrix/modules/main/lib/session/handlers/redissessionhandler.php:47
+#5: Bitrix\Main\Session\Handlers\RedisSessionHandler->open
+	
+#6: session_start
+	/var/www/bitrix/bitrix/modules/main/lib/session/session.php:154
+#7: Bitrix\Main\Session\Session->start
+	/var/www/bitrix/bitrix/modules/main/lib/session/kernelsessionproxy.php:47
+#8: Bitrix\Main\Session\KernelSessionProxy->start
+	/var/www/bitrix/bitrix/modules/main/include.php:182
+#9: require_once(string)
+	/var/www/bitrix/bitrix/modules/main/include/prolog_before.php:19
+#10: require_once(string)
+	/var/www/bitrix/bitrix/modules/main/include/prolog.php:10
+#11: require_once(string)
+	/var/www/bitrix/bitrix/header.php:1
+#12: require(string)
+	/var/www/bitrix/index.php:2
+----------
+
+2025-05-13 16:50:28 - Host: localhost - UNCAUGHT_EXCEPTION - [Bitrix\Main\NotSupportedException] 
+redis extension is not loaded. (150)
+/var/www/bitrix/bitrix/modules/main/lib/data/configurator/redisconnectionconfigurator.php:17
+#0: Bitrix\Main\Data\Configurator\RedisConnectionConfigurator->__construct
+	/var/www/bitrix/bitrix/modules/main/lib/data/redisconnection.php:20
+#1: Bitrix\Main\Data\RedisConnection->__construct
+	/var/www/bitrix/bitrix/modules/main/lib/data/connectionpool.php:63
+#2: Bitrix\Main\Data\ConnectionPool->createConnection
+	/var/www/bitrix/bitrix/modules/main/lib/data/connectionpool.php:88
+#3: Bitrix\Main\Data\ConnectionPool->getConnection
+	/var/www/bitrix/bitrix/modules/main/lib/session/handlers/redissessionhandler.php:116
+#4: Bitrix\Main\Session\Handlers\RedisSessionHandler->createConnection
+	/var/www/bitrix/bitrix/modules/main/lib/session/handlers/redissessionhandler.php:47
+#5: Bitrix\Main\Session\Handlers\RedisSessionHandler->open
+	
+#6: session_start
+	/var/www/bitrix/bitrix/modules/main/lib/session/session.php:154
+#7: Bitrix\Main\Session\Session->start
+	/var/www/bitrix/bitrix/modules/main/lib/session/kernelsessionproxy.php:47
+#8: Bitrix\Main\Session\KernelSessionProxy->start
+	/var/www/bitrix/bitrix/modules/main/include.php:182
+#9: require_once(string)
+	/var/www/bitrix/bitrix/modules/main/include/prolog_before.php:19
+#10: require_once(string)
+	/var/www/bitrix/bitrix/modules/main/include/prolog.php:10
+#11: require_once(string)
+	/var/www/bitrix/bitrix/header.php:1
+#12: require(string)
+	/var/www/bitrix/index.php:2
+----------
+
+2025-05-13 16:50:29 - Host: localhost - UNCAUGHT_EXCEPTION - [Bitrix\Main\NotSupportedException] 
+redis extension is not loaded. (150)
+/var/www/bitrix/bitrix/modules/main/lib/data/configurator/redisconnectionconfigurator.php:17
+#0: Bitrix\Main\Data\Configurator\RedisConnectionConfigurator->__construct
+	/var/www/bitrix/bitrix/modules/main/lib/data/redisconnection.php:20
+#1: Bitrix\Main\Data\RedisConnection->__construct
+	/var/www/bitrix/bitrix/modules/main/lib/data/connectionpool.php:63
+#2: Bitrix\Main\Data\ConnectionPool->createConnection
+	/var/www/bitrix/bitrix/modules/main/lib/data/connectionpool.php:88
+#3: Bitrix\Main\Data\ConnectionPool->getConnection
+	/var/www/bitrix/bitrix/modules/main/lib/session/handlers/redissessionhandler.php:116
+#4: Bitrix\Main\Session\Handlers\RedisSessionHandler->createConnection
+	/var/www/bitrix/bitrix/modules/main/lib/session/handlers/redissessionhandler.php:47
+#5: Bitrix\Main\Session\Handlers\RedisSessionHandler->open
+	
+#6: session_start
+	/var/www/bitrix/bitrix/modules/main/lib/session/session.php:154
+#7: Bitrix\Main\Session\Session->start
+	/var/www/bitrix/bitrix/modules/main/lib/session/kernelsessionproxy.php:47
+#8: Bitrix\Main\Session\KernelSessionProxy->start
+	/var/www/bitrix/bitrix/modules/main/include.php:182
+#9: require_once(string)
+	/var/www/bitrix/bitrix/modules/main/include/prolog_before.php:19
+#10: require_once(string)
+	/var/www/bitrix/bitrix/modules/main/include/prolog.php:10
+#11: require_once(string)
+	/var/www/bitrix/bitrix/header.php:1
+#12: require(string)
+	/var/www/bitrix/index.php:2
+----------
+
+2025-05-13 16:50:30 - Host: localhost - UNCAUGHT_EXCEPTION - [Bitrix\Main\NotSupportedException] 
+redis extension is not loaded. (150)
+/var/www/bitrix/bitrix/modules/main/lib/data/configurator/redisconnectionconfigurator.php:17
+#0: Bitrix\Main\Data\Configurator\RedisConnectionConfigurator->__construct
+	/var/www/bitrix/bitrix/modules/main/lib/data/redisconnection.php:20
+#1: Bitrix\Main\Data\RedisConnection->__construct
+	/var/www/bitrix/bitrix/modules/main/lib/data/connectionpool.php:63
+#2: Bitrix\Main\Data\ConnectionPool->createConnection
+	/var/www/bitrix/bitrix/modules/main/lib/data/connectionpool.php:88
+#3: Bitrix\Main\Data\ConnectionPool->getConnection
+	/var/www/bitrix/bitrix/modules/main/lib/session/handlers/redissessionhandler.php:116
+#4: Bitrix\Main\Session\Handlers\RedisSessionHandler->createConnection
+	/var/www/bitrix/bitrix/modules/main/lib/session/handlers/redissessionhandler.php:47
+#5: Bitrix\Main\Session\Handlers\RedisSessionHandler->open
+	
+#6: session_start
+	/var/www/bitrix/bitrix/modules/main/lib/session/session.php:154
+#7: Bitrix\Main\Session\Session->start
+	/var/www/bitrix/bitrix/modules/main/lib/session/kernelsessionproxy.php:47
+#8: Bitrix\Main\Session\KernelSessionProxy->start
+	/var/www/bitrix/bitrix/modules/main/include.php:182
+#9: require_once(string)
+	/var/www/bitrix/bitrix/modules/main/include/prolog_before.php:19
+#10: require_once(string)
+	/var/www/bitrix/bitrix/modules/main/include/prolog.php:10
+#11: require_once(string)
+	/var/www/bitrix/bitrix/header.php:1
+#12: require(string)
+	/var/www/bitrix/index.php:2
+----------
+

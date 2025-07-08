@@ -1,12 +1,6 @@
 <?php
-//if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
-//header('Content-Type: application/json');
-
-/*if ($_REQUEST['id']) {
-//    \Bitrix\Main\Loader::includeModule('iblock');
-
-    echo json_encode($_REQUEST);
-}*/
+if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
+header('Content-Type: application/json');
 
 // Демо данные
 $case = array(
@@ -17,7 +11,7 @@ $case = array(
     'description' => 'Description',
     'url' => 'URL',
     'tech' => array(
-        'Technology',
+        $_REQUEST['id'],
         'TTT'
     ),
     'images' => array(
@@ -28,7 +22,7 @@ $case = array(
     'results' => 'sdcsdcsc',
 );
 
-if ($case && is_array($case)) {
+if ($case) {
     // Формируем ответ
     $response = $case;
     http_response_code(200);

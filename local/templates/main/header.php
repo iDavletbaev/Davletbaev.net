@@ -17,6 +17,10 @@ global $USER;
     // CSS
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/style.css");
     Asset::getInstance()->addCss("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css");
+
+
+//    Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/cases.cs");
+//    Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/cases.js");
     ?>
 </head>
 <body>

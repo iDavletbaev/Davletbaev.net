@@ -1,4 +1,7 @@
 /bitrix/*
+
+
+
 /upload/*
 .idea/*
 .DS_Store
@@ -8,3 +11,4 @@
 /local/composer.lock
 /local/vendor/
 /local/composer.lock
+*log.txt

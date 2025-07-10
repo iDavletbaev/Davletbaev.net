@@ -104,7 +104,7 @@
                         <div class="certificate-item-inner">
                             <div class="certificate-item-image">
                                 <a href="certificates.html">
-                                    <img src="assets/images/2.jpg" alt="">
+                                    <img src="/local/php_interface/include/assets/images/2.jpg" alt="">
                                 </a>
                             </div>
                             <div class="certificate-item-vendor">
@@ -163,9 +163,6 @@
                     <div class="col-lg-6">
                         <div class="task-item-inner">
                             <div class="row">
-                                <div class="col-3 text-center task-item-image">
-                                    icon
-                                </div>
                                 <div class="col-9 task-item-text">
                                     <h3>Установка и настройка серверов Linux</h3>
                                     Имея опыт в администрировании серверов Linux мне совсем не трудно установить,
@@ -177,9 +174,6 @@
                     <div class="col-lg-6">
                         <div class="task-item-inner">
                             <div class="row">
-                                <div class="col-3 text-center">
-                                    icon
-                                </div>
                                 <div class="col-9 task-item-text">
                                     <h3>Вертска и шаблоны</h3>
                                     Создание шаблона сайта и компонентов как по готовой верстке, так и верстка по
@@ -191,9 +185,6 @@
                     <div class="col-lg-6">
                         <div class="task-item-inner">
                             <div class="row">
-                                <div class="col-3 text-center">
-                                    icon
-                                </div>
                                 <div class="col-9 task-item-text">
                                     <h3>Интеграции</h3>
                                     Интеграция сайтов с различными внешними системами: CRM, 1С и прочие (с
@@ -205,9 +196,6 @@
                     <div class="col-lg-6">
                         <div class="task-item-inner">
                             <div class="row">
-                                <div class="col-3 text-center">
-                                    icon
-                                </div>
                                 <div class="col-9 task-item-text">
                                     <h3>Оптимизация</h3>
                                     Оптимизация скорости работы сайта под PageSpeed Insights. Анализ и рефакторинг кода,

@@ -213,11 +213,11 @@
                 <h2>Контакты</h2>
                 <div class="row mt-3 mb-3">
                     <div class="col-lg-6 text-center contacts-inner">
-                        <a href="https://t.me/IlnurD" title="Telegram"><img src="assets/images/telegram.png" alt=""></a>
+                        <a href="https://t.me/IlnurD" title="Telegram"><img src="/local/php_interface/include/assets/images/telegram.png" alt=""></a>
                         <a href="https://t.me/IlnurD" title="Telegram">@IlnurD</a>
                     </div>
                     <div class="col-lg-6 text-center contacts-inner">
-                        <a href="mailto:ilnur@davletbaev.net"><img src="assets/images/email.png" alt=""></a>
+                        <a href="mailto:ilnur@davletbaev.net"><img src="/local/php_interface/include/assets/images/email.png" alt=""></a>
                         <a href="mailto:ilnur@davletbaev.net">ilnur@davletbaev.net</a>
                     </div>
                 </div>

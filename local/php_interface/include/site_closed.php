@@ -15,8 +15,8 @@
     <meta type="description" content="Давлетбаев Ильнур - Разработка и техниеская поддержка сайтов">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="/local/php_interface/include/assets/css/main.css">
+    <link rel="stylesheet" href="/local/php_interface/include/assets/bootstrap/css/bootstrap.css">
 
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript" >
@@ -43,19 +43,19 @@
             <div class="row">
                 <div class="col-lg-3 logo">
                     <a href="/">
-                        <img src="assets/images/idavletbaev.png" alt="Ильнур Давлетбаев">
+                        <img src="/local/php_interface/include/assets/images/idavletbaev.png" alt="Ильнур Давлетбаев">
                     </a>
                 </div>
                 <div class="col-lg-9 menu">
                     <nav>
-                        <ul>
+                        <!--<ul>
                             <li>
                                 <a href="/" class="active">Главная</a>
                             </li>
                             <li>
                                 <a href="certificates.html">Сертификаты</a>
                             </li>
-                        </ul>
+                        </ul>-->
                     </nav>
                 </div>
             </div>
@@ -88,7 +88,7 @@
                         </div>
                     </div>
                     <div class="col-lg-6 text-center about-image">
-                        <img src="assets/images/photo.jpg" alt="Ильнур Давлетбаев">
+                        <img src="/local/php_interface/include/assets/images/photo.jpg" alt="Ильнур Давлетбаев">
                     </div>
                 </div>
             </div>
@@ -119,7 +119,7 @@
                         <div class="certificate-item-inner">
                             <div class="certificate-item-image">
                                 <a href="certificates.html">
-                                    <img src="assets/images/1.jpg" alt="">
+                                    <img src="/local/php_interface/include/assets/images/1.jpg" alt="">
                                 </a>
                             </div>
                             <div class="certificate-item-vendor">
@@ -134,7 +134,7 @@
                         <div class="certificate-item-inner">
                             <div class="certificate-item-image">
                                 <a href="certificates.html">
-                                    <img src="assets/images/3.jpg" alt="">
+                                    <img src="/local/php_interface/include/assets/images/3.jpg" alt="">
                                 </a>
                             </div>
                             <div class="certificate-item-vendor">
@@ -148,9 +148,9 @@
                         </div>
                     </div>
                     <div class="col-12 text-center mt-5">
-                        <a href="certificates.html" class="btn btn-success">
+                        <!--<a href="certificates.html" class="btn btn-success">
                             Посмотреть все сертификаты
-                        </a>
+                        </a>-->
                     </div>
                 </div>
             </div>
@@ -242,10 +242,10 @@
         </div>
     </footer>
 </div>
-<script src="assets/js/jquery-3.7.0.min.js"></script>
-<script src="assets/bootstrap/js/bootstrap.js"></script>
-<script src="assets/bootstrap/js/bootstrap.esm.js"></script>
-<script src="assets/bootstrap/js/bootstrap.bundle.js"></script>
-<script src="assets/js/main.js"></script>
+<script src="/local/php_interface/include/assets/js/jquery-3.7.0.min.js"></script>
+<script src="/local/php_interface/include/assets/bootstrap/js/bootstrap.js"></script>
+<script src="/local/php_interface/include/assets/bootstrap/js/bootstrap.esm.js"></script>
+<script src="/local/php_interface/include/assets/bootstrap/js/bootstrap.bundle.js"></script>
+<script src="/local/php_interface/include/assets/js/main.js"></script>
 </body>
 </html>

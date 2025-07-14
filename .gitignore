@@ -1,13 +1,9 @@
 .idea/*
 .DS_Store
 
-/bitrix/backup*
-/bitrix/cache*
-/bitrix/managed_cache*
-/bitrix/updates*
-/bitrix/.settings.php
-/bitrix/php_interface/dbconn.php
-/bitrix/tmp*
+robots.txt
+
+/bitrix*
 
 /upload/*
 

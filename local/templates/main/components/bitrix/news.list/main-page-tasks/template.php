@@ -22,10 +22,10 @@ $this->setFrameMode(true);
             <?php foreach ($arResult['ITEMS'] as $item) { ?>
                 <div class="skill-card">
                     <div class="skill-icon">
-                       <?=$arResult['ITEMS'][0]['DISPLAY_PROPERTIES']['FA_ICON']['~VALUE']?>
+                       <?=$item['DISPLAY_PROPERTIES']['FA_ICON']['~VALUE']?>
                     </div>
                     <h3><?=$item['NAME']?></h3>
-                    <p><?=$arResult['ITEMS'][0]['~PREVIEW_TEXT']?></p>
+                    <p><?=$item['~PREVIEW_TEXT']?></p>
                 </div>
             <?php } ?>
         </div>

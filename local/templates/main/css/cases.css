@@ -90,6 +90,7 @@
     padding: 5px 15px;
     border-radius: 20px;
     font-size: 0.8rem;
+    border: unset;
 }
 
 .case-card-content {
@@ -166,8 +167,8 @@
 /* Модальное окно кейса */
 .modal-case-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
+    grid-template-columns: .5fr 1.5fr;
+    gap: 70px;
 }
 
 .case-slider {
@@ -212,6 +213,9 @@
     margin-bottom: 20px;
     color: var(--gray-color);
     font-size: 0.9rem;
+}
+.case-results {
+    margin-bottom: 30px;
 }
 
 .case-description {

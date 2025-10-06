@@ -1,11 +1,10 @@
-document.addEventListener('DOMContentLoaded', function() {
-
+document.addEventListener('DOMContentLoaded', function () {
     // Фильтрация кейсов (остается как было)
     const categoryButtons = document.querySelectorAll('.category-btn');
     const caseCards = document.querySelectorAll('.case-card');
 
     categoryButtons.forEach(button => {
-        button.addEventListener('click', function() {
+        button.addEventListener('click', function () {
             categoryButtons.forEach(btn => btn.classList.remove('active'));
             this.classList.add('active');
 
@@ -19,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         card.style.transform = 'translateY(0)';
                     }, 50);
                 } else {
+                    document.getElementById('category_filter_' + button.dataset.category).classList.add('active')
                     card.style.opacity = '0';
                     card.style.transform = 'translateY(20px)';
                     setTimeout(() => {
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Модальное окно кейса
     const modal = document.getElementById('case-modal');
     const modalTitle = document.getElementById('modal-case-title');
-    const modalDate = document.getElementById('modal-case-date');
+    //const modalDate = document.getElementById('modal-case-date');
     const modalDuration = document.getElementById('modal-case-duration');
     const modalCategory = document.getElementById('modal-case-category');
     const modalDescription = document.getElementById('modal-case-description');
@@ -41,11 +41,17 @@ document.addEventListener('DOMContentLoaded', function() {
     const modalVisitBtn = document.getElementById('case-visit-btn');
     const modalImage = document.getElementById('modal-case-image');
     const thumbnailsContainer = document.getElementById('case-thumbnails');
-    const closeModalBtn = document.querySelector('.close-modal');
+    const closeModal = document.querySelector('.close-modal');
+
+    // Функция закрытия модального окна
+    function closeModalBtn() {
+        modal.style.display = 'none';
+        document.body.style.overflow = '';
+    }
 
     // Обработчики для кнопок "Подробнее"
     document.querySelectorAll('.case-read-more').forEach(button => {
-        button.addEventListener('click', function() {
+        button.addEventListener('click', function () {
             const caseId = this.closest('.case-card').dataset.case;
             loadCaseData(caseId);
         });
@@ -64,9 +70,6 @@ document.addEventListener('DOMContentLoaded', function() {
         `;
 
         // AJAX-запрос
-
-        //$.ajax()
-
         fetch(`/local/templates/main/ajax/case_ajax.php?id=${caseId}`)
             .then(response => {
                 if (!response.ok) {
@@ -75,7 +78,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 return response.json();
             })
             .then(data => {
-                console.debug('data', data);
                 // Заполняем модальное окно полученными данными
                 renderCaseModal(data);
             })
@@ -86,10 +88,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div class="error-message">
                         <i class="fas fa-exclamation-triangle"></i>
                         <p>Произошла ошибка при загрузке данных. Пожалуйста, попробуйте позже.</p>
-                        <button class="btn" onclick="closeModal()">Закрыть</button>
                     </div>
                 `;
-                document.querySelector('.close-modal').addEventListener('click', closeModal);
+                document.querySelector('.close-modal').addEventListener('click', closeModalBtn);
             });
     }
 
@@ -99,83 +100,96 @@ document.addEventListener('DOMContentLoaded', function() {
             <span class="close-modal">&times;</span>
             <div class="modal-case-content">
                 <div class="case-slider">
-                    <img src="${data.images[0]}" alt="${data.title}" class="active-slide" id="modal-case-image">
+                    <img src="${data.images[0].SRC}" alt="${data.title}" class="active-slide" id="modal-case-image">
                     <div class="case-thumbnails" id="case-thumbnails"></div>
                 </div>
                 <div class="case-details">
                     <h2 id="modal-case-title">${data.title}</h2>
                     <div class="case-meta-modal">
-                        <span id="modal-case-date">${data.date}</span>
-                        <span id="modal-case-duration">${data.duration}</span>
+                        ${data.duration}
                         <span id="modal-case-category">${data.category}</span>
                     </div>
                     <div class="case-description" id="modal-case-description">${data.description}</div>
+
+                    <div class="case-results">
+                        <h3>Результаты:</h3>
+                        <span id="modal-case-results"></span>
+                    </div>
 
                     <div class="case-tech">
                         <h3>Использованные технологии:</h3>
                         <div class="tech-tags" id="modal-case-tech"></div>
                     </div>
 
-                    <div class="case-results">
-                        <h3>Результаты:</h3>
-                        <ul class="results-list" id="modal-case-results"></ul>
-                    </div>
-
-                    <a href="${data.url}" class="btn" id="case-visit-btn" target="_blank">Посетить сайт</a>
+                    <span id="case-link">
+                    </span>
                 </div>
             </div>
         `;
 
+        // Ссылка
+        const linkContainer = document.getElementById('case-link');
+        if (data.url.link) {
+            linkContainer.innerHTML = `<a href="${data.url.link}" class="btn" id="case-visit-btn" target="_blank">
+            ${data.url.description}
+            </a>`
+        }
+
         // Заполняем технологии
         const techContainer = document.getElementById('modal-case-tech');
-        data.tech.forEach(tech => {
-            const tag = document.createElement('span');
-            tag.textContent = tech;
-            techContainer.appendChild(tag);
-        });
+
+        if (data.tech) {
+            data.tech.forEach(tech => {
+                const tag = document.createElement('span');
+                tag.textContent = tech.UF_NAME;
+                techContainer.appendChild(tag);
+            });
+        } else {
+            document.querySelector('.case-tech').style.display = 'none';
+        }
 
         // Заполняем результаты
         const resultsContainer = document.getElementById('modal-case-results');
-            const p = document.createElement('p');
-            p.textContent = data.results;
-            resultsContainer.appendChild(p);
+        if (data.results) {
+            resultsContainer.innerHTML = data.results
+        } else {
+            document.querySelector('.case-results').style.display = 'none';
+        }
 
         // Заполняем галерею изображений
         const thumbnailsContainer = document.getElementById('case-thumbnails');
-        data.images.forEach((img, index) => {
-            const thumb = document.createElement('img');
-            thumb.src = img;
-            thumb.alt = `Изображение ${index + 1}`;
-            if (index === 0) thumb.classList.add('active');
-            thumb.addEventListener('click', () => {
-                document.getElementById('modal-case-image').src = img;
-                document.querySelectorAll('.case-thumbnails img').forEach(t => t.classList.remove('active'));
-                thumb.classList.add('active');
+
+        if (data.images) {
+
+            data.images.forEach((img, index) => {
+                const thumb = document.createElement('img');
+                thumb.src = img.SRC;
+                thumb.alt = img.DESCRIPTION;
+                if (index === 0) thumb.classList.add('active');
+                thumb.addEventListener('click', () => {
+                    document.getElementById('modal-case-image').src = img.SRC;
+                    document.querySelectorAll('.case-thumbnails img').forEach(t => t.classList.remove('active'));
+                    thumb.classList.add('active');
+                });
+                thumbnailsContainer.appendChild(thumb);
             });
-            thumbnailsContainer.appendChild(thumb);
-        });
+        }
 
         // Добавляем обработчик закрытия
-        document.querySelector('.close-modal').addEventListener('click', closeModal);
-    }
-
-    // Функция закрытия модального окна
-    function closeModal() {
-        modal.style.display = 'none';
-        document.body.style.overflow = '';
+        document.querySelector('.close-modal').addEventListener('click', closeModalBtn);
     }
 
     // Закрытие по клику вне окна
-    window.addEventListener('click', function(event) {
+    window.addEventListener('click', function (event) {
         if (event.target === modal) {
-            closeModal();
+            closeModalBtn();
         }
     });
 
     // Закрытие по ESC
-    document.addEventListener('keydown', function(event) {
+    document.addEventListener('keydown', function (event) {
         if (event.key === 'Escape' && modal.style.display === 'block') {
-            closeModal();
+            closeModalBtn();
         }
     });
 

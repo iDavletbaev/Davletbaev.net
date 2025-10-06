@@ -12,39 +12,51 @@ CHTTP::SetStatus("404 Not Found");
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 
 $APPLICATION->SetTitle("404 Not Found");
-
-/*$APPLICATION->IncludeComponent("bitrix:main.map", ".default", Array(
-	"LEVEL"	=>	"3",
-	"COL_NUM"	=>	"2",
-	"SHOW_DESCRIPTION"	=>	"Y",
-	"SET_TITLE"	=>	"Y",
-	"CACHE_TIME"	=>	"36000000"
-	)
-);*/
 ?>
-    <div class="error-container">
-        <div class="error-content">
-            <div class="error-animation">
-                <div class="error-circle">
-                    <div class="error-number">4</div>
-                    <div class="error-icon">
-                        <i class="fas fa-question"></i>
+<link rel="stylesheet" href="/local/templates/main/components/bitrix/news.detail/hero/style.css">
+    <style>
+        .hero {
+            padding: 180px 0 100px;
+            background: linear-gradient(135deg, rgba(26, 32, 44, 0.9) 0%, rgba(42, 50, 70, 0.9) 100%);
+            background-size: cover;
+            overflow: hidden;
+        }
+    </style>
+
+    <section id="about" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="title">Упс...</h1>
+                    <h2 class="subtitle">Такой страницы нет!</h2>
+
+                    <div class="error-buttons">
+                        <a href="/" class="btn btn-error">
+                            <i class="fas fa-home"></i> На главную
+                        </a>
+                        <a href="javascript:history.back()" class="btn btn-error-outline">
+                            <i class="fas fa-arrow-left"></i> Вернуться назад
+                        </a>
                     </div>
-                    <div class="error-number">4</div>
+                </div>
+
+                <div class="hero-image">
+                    <div class="photo-container">
+                        <div class="photo-frame"></div>
+
+                        <div class="error404-circle">
+                            <div class="error404-number">4</div>
+                            <div class="error404-number">0</div>
+                            <div class="error404-number">4</div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
-            <h1>Страница не найдена</h1>
-            <p>Запрашиваемая вами страница перемещена или больше не существует</p>
-            <div class="error-buttons">
-                <a href="index.html" class="btn btn-error">
-                    <i class="fas fa-home"></i> На главную
-                </a>
-                <a href="javascript:history.back()" class="btn btn-error-outline">
-                    <i class="fas fa-arrow-left"></i> Вернуться назад
-                </a>
-            </div>
         </div>
-    </div>
+    </section>
+
+
 
     <!-- Анимационные элементы -->
     <div class="error-particle" style="--i:1"></div>

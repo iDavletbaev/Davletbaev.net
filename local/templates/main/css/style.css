@@ -457,7 +457,7 @@ section {
     padding: 30px;
     border-radius: 10px;
     /*max-width: 800px;*/
-    width: 95%;
+    width: 55%;
     position: relative;
     animation: modalFadeIn 0.3s ease-out;
 }

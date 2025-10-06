@@ -1,13 +1,6 @@
 <?php
 $aMenuLinks = Array(
 	Array(
-		"Обо мне",
-		"/#about",
-		Array(),
-		Array(),
-		""
-	),
-	Array(
 		"Навыки",
 		"/#skills",
 		Array(),
@@ -22,6 +15,13 @@ $aMenuLinks = Array(
 		""
 	),
 	Array(
+		"Кейсы",
+		"/#cases",
+		Array(),
+		Array(),
+		""
+	),
+/*	Array(
 		"Услуги",
 		"services/",
 		Array(),
@@ -34,7 +34,7 @@ $aMenuLinks = Array(
 		Array(),
 		Array(),
 		""
-	),
+	),*/
 	Array(
 		"Контакты",
 		"/#contact",

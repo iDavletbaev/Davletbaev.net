@@ -125,7 +125,7 @@ $APPLICATION->IncludeComponent(
 		"SET_TITLE" => "Y",
 		"SHOW_404" => "N",
 		"SLIDER_PROPERTY" => "",
-		"SORT_BY1" => "ID",
+		"SORT_BY1" => "SORT",
 		"SORT_BY2" => "ID",
 		"SORT_ORDER1" => "ASC",
 		"SORT_ORDER2" => "ASC",

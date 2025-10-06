@@ -31,22 +31,32 @@ global $USER;
         <nav class="navbar">
             <a href="/" class="logo">Ilnur <span>Davletbaev</span></a>
 
-            <? $APPLICATION->IncludeComponent("bitrix:menu", "top", array(
-                "ALLOW_MULTI_SELECT" => "N",    // Разрешить несколько активных пунктов одновременно
-                "CHILD_MENU_TYPE" => "left",    // Тип меню для остальных уровней
-                "DELAY" => "N",    // Откладывать выполнение шаблона меню
-                "MAX_LEVEL" => "1",    // Уровень вложенности меню
-                "MENU_CACHE_GET_VARS" => array(    // Значимые переменные запроса
-                    0 => "",
+            <?php
+            if ($APPLICATION->GetCurPage() == '/') {
+                $menuType = 'top';
+            } else {
+                $menuType = 'top2';
+            }
+            $APPLICATION->IncludeComponent(
+                "bitrix:menu",
+                'top',
+                array(
+                    "ALLOW_MULTI_SELECT" => "N",
+                    "CHILD_MENU_TYPE" => "left",
+                    "DELAY" => "N",
+                    "MAX_LEVEL" => "1",
+                    "MENU_CACHE_GET_VARS" => array(
+                        0 => "",
+                    ),
+                    "MENU_CACHE_TIME" => "3600",
+                    "MENU_CACHE_TYPE" => "A",
+                    "MENU_CACHE_USE_GROUPS" => "Y",
+                    "ROOT_MENU_TYPE" => $menuType,
+                    "USE_EXT" => "N",
                 ),
-                "MENU_CACHE_TIME" => "3600",    // Время кеширования (сек.)
-                "MENU_CACHE_TYPE" => "A",    // Тип кеширования
-                "MENU_CACHE_USE_GROUPS" => "Y",    // Учитывать права доступа
-                "ROOT_MENU_TYPE" => "top",    // Тип меню для первого уровня
-                "USE_EXT" => "N",    // Подключать файлы с именами вида .тип_меню.menu_ext.php
-            ),
                 false
-            ); ?>
+            );
+            ?>
 
             <!-- Кнопка бургер для мобильных -->
             <!--<div class="hamburger">

@@ -17,7 +17,7 @@ use Bitrix\Main\Localization\Loc;
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
-<section id="tasks" class="tasks-section">
+<section id="<?=$arResult['IBLOCK']['CODE']?>" class="tasks-section">
     <div class="container">
         <h2 class="section-title"><?=$arResult['IBLOCK']['NAME']?></h2>
         <div class="tasks-grid">

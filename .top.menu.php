@@ -21,20 +21,6 @@ $aMenuLinks = Array(
 		Array(),
 		""
 	),
-/*	Array(
-		"Услуги",
-		"services/",
-		Array(),
-		Array(),
-		""
-	),
-	Array(
-		"Блог",
-		"blog/",
-		Array(),
-		Array(),
-		""
-	),*/
 	Array(
 		"Контакты",
 		"/#contact",

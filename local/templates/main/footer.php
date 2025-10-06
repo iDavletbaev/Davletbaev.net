@@ -1,9 +1,12 @@
 <?php
+global $APPLICATION;
 if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 
 use Bitrix\Main\Page\Asset;
 
 Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/main.js");
+
+d($GLOBALS['CONTACTS']);
 ?>
 
 <!-- Подвал -->
@@ -11,29 +14,66 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/main.js");
     <div class="container">
         <div class="footer-content">
             <div class="footer-logo">
-                <a href="#" class="logo">Ivan<span>Dev</span></a>
-                <p>Веб-разработчик & Linux администратор</p>
+                <a href="/" class="logo">
+                    <?=$GLOBALS['CONTACTS']['Name']['UF_DAV_VALUE']?>
+                    <span><?=$GLOBALS['CONTACTS']['LastName']['UF_DAV_VALUE']?></span>
+                    </a>
+                <p>Веб-разработчик</p>
             </div>
-            <div class="footer-links">
-                <h3>Быстрые ссылки</h3>
-                <ul>
-                    <li><a href="#about">Обо мне</a></li>
-                    <li><a href="#skills">Навыки</a></li>
-                    <li><a href="#certificates">Сертификаты</a></li>
-                    <li><a href="#tasks">Услуги</a></li>
-                    <li><a href="#contact">Контакты</a></li>
-                </ul>
-            </div>
+            <?php
+            if ($APPLICATION->GetCurPage() == '/') {
+                $menuType = 'top';
+            } else {
+                $menuType = 'top2';
+            }
+            $APPLICATION->IncludeComponent(
+                "bitrix:menu",
+                'footer',
+                array(
+                    "ALLOW_MULTI_SELECT" => "N",
+                    "CHILD_MENU_TYPE" => "left",
+                    "DELAY" => "N",
+                    "MAX_LEVEL" => "1",
+                    "MENU_CACHE_GET_VARS" => array(
+                        0 => "",
+                    ),
+                    "MENU_CACHE_TIME" => "3600",
+                    "MENU_CACHE_TYPE" => "A",
+                    "MENU_CACHE_USE_GROUPS" => "Y",
+                    "ROOT_MENU_TYPE" => $menuType,
+                    "USE_EXT" => "N",
+                ),
+                false
+            );
+            ?>
+
             <div class="footer-contact">
                 <h3>Контакты</h3>
                 <ul>
-                    <li><i class="fas fa-envelope"></i> ivan@example.com</li>
-                    <li><i class="fas fa-phone"></i> +7 (123) 456-78-90</li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <?=$GLOBALS['CONTACTS']['Email']['UF_DAV_VALUE']?>
+                    </li>
+                    <li>
+                        <i class="fa fa-telegram" aria-hidden="true"></i>
+
+                        <a href="<?=$GLOBALS['CONTACTS']['Telegram']['UF_DAV_VALUE']?>"
+                           target="_blank">
+                            <?=$GLOBALS['CONTACTS']['Telegram']['UF_DAV_NAME']?>
+                        </a>
+                    </li>
+                    <li>
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                        <a href="<?=$GLOBALS['CONTACTS']['LinkedIn']['UF_DAV_VALUE']?>"
+                           target="_blank">
+                            <?=$GLOBALS['CONTACTS']['LinkedIn']['UF_DAV_NAME']?>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; <?= date('Y') ?> Ильнур Давлетбаев. Все права защищены.</p>
+            <p>&copy; <?= date('Y') ?>  <?=$GLOBALS['CONTACTS']['FullName']['UF_DAV_VALUE']?>. Все права защищены.</p>
         </div>
     </div>
 </footer>

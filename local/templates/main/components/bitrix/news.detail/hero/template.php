@@ -18,13 +18,13 @@ $background = rand(1, count($arResult['PROPERTIES']['BACK_PHOTOS']['VALUE']));
 ?>
 
 <style>
-    .hero {
+    /*.hero {
         padding: 180px 0 100px;
         background: linear-gradient(135deg, rgba(26, 32, 44, 0.9) 0%, rgba(42, 50, 70, 0.9) 100%),
         url(<?=$arResult['PROPERTIES']['BACK_PHOTOS']['ARR_VALUE'][--$background]['SRC']?>);
         background-size: cover;
         overflow: hidden;
-    }
+    }*/
 </style>
 
 <section id="about" class="hero">

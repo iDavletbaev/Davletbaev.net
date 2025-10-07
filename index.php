@@ -253,36 +253,19 @@ $APPLICATION->IncludeComponent(
 	false
 );?>
 
-<!-- Блок с контактами и формой --> <section id="contact" class="contact-section">
-<div class="container">
-	<h2 class="section-title">Свяжитесь со мной</h2>
-	<div class="contact-grid">
-		<div class="contact-info">
-			<h3>Контактная информация</h3>
-			<ul>
-				<li><i class="fas fa-envelope"></i> <a href="mailto:ivan@example.com">ivan@example.com</a></li>
-				<li><i class="fas fa-phone"></i> +7 (123) 456-78-90</li>
-				<li><i class="fas fa-map-marker-alt"></i> Москва, Россия</li>
-			</ul>
-			<div class="contact-social">
- <a href="#"><i class="fab fa-github"></i></a> <a href="#"><i class="fab fa-linkedin"></i></a> <a href="#"><i class="fab fa-telegram"></i></a> <a href="#"><i class="fab fa-vk"></i></a>
-			</div>
-		</div>
-		<div class="contact-form" data-cursor-hover="">
-			<form id="feedback-form">
-				<div class="form-group">
- <input type="text" id="name" name="name" placeholder="Ваше имя" required="">
-				</div>
-				<div class="form-group">
- <input type="email" id="email" name="email" placeholder="Ваш email" required="">
-				</div>
-				<div class="form-group">
- <textarea id="message" name="message" placeholder="Ваше сообщение" required=""></textarea>
-				</div>
- <button type="submit" class="btn">Отправить</button>
-			</form>
-		</div>
-	</div>
-</div>
- </section> <br>
+<?php
+// Contacts & form block
+$APPLICATION->IncludeComponent(
+    "bitrix:main.include",
+    "",
+    Array(
+        "AREA_FILE_SHOW" => "file",
+        "AREA_FILE_SUFFIX" => "inc",
+        "EDIT_TEMPLATE" => "standard.php",
+        "PATH" => "/local/include/contactForm.php"
+    )
+);
+?>
+
+
 <?php require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php");

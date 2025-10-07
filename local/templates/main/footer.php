@@ -53,7 +53,7 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/main.js");
                         <?=$GLOBALS['CONTACTS']['Email']['UF_DAV_VALUE']?>
                     </li>
                     <li>
-                        <i class="fa fa-telegram" aria-hidden="true"></i>
+                        <i class="fab fa-telegram" aria-hidden="true"></i>
 
                         <a href="<?=$GLOBALS['CONTACTS']['Telegram']['UF_DAV_VALUE']?>"
                            target="_blank">
@@ -61,7 +61,7 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/main.js");
                         </a>
                     </li>
                     <li>
-                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                        <i class="fab fa-linkedin" aria-hidden="true"></i>
                         <a href="<?=$GLOBALS['CONTACTS']['LinkedIn']['UF_DAV_VALUE']?>"
                            target="_blank">
                             <?=$GLOBALS['CONTACTS']['LinkedIn']['UF_DAV_NAME']?>

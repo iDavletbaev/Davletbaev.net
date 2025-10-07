@@ -308,6 +308,11 @@ section {
     font-size: 1.1rem;
 }
 
+.contact-info li a {
+    text-decoration: none;
+    color: var(--light-color);
+}
+
 .contact-info i {
     color: var(--primary-color);
     font-size: 1.3rem;
@@ -562,6 +567,9 @@ section {
     .section-title {
         font-size: 2.2rem;
     }
+    .certificate-mp-card {
+        height: 300px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -648,8 +656,9 @@ section {
     .contact-grid {
         grid-template-columns: 1fr;
     }
-    .certificate-mp-card {
-        height: 320px;
+
+    .certificates-grid {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -677,6 +686,9 @@ section {
 
     .modal-content {
         padding: 30px 20px;
+    }
+    .hero {
+        padding: 10px 0 10px;
     }
 }
 /* Кнопка "Наверх" */

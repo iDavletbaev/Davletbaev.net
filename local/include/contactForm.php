@@ -4,7 +4,9 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
 }
 
 use \Bitrix\Main\Localization\Loc;
-//
+use Bitrix\Main\Page\Asset;
+
+Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/form.js");
 ?>
 
 <section id="contact" class="contact-section">
@@ -52,17 +54,29 @@ use \Bitrix\Main\Localization\Loc;
 
             </div>
             <div class="contact-form" data-cursor-hover="">
-                <form id="feedback-form">
+                <form id="feedback-form" method="post">
                     <div class="form-group">
-                        <input type="text" id="name" name="name" placeholder="Ваше имя" required="">
+                        <input type="text"
+                               id="name"
+                               name="name"
+                               placeholder="<?=Loc::getMessage('CONTACT_BLOCK_INPUT_NAME')?>"
+                        >
                     </div>
                     <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="Ваш email" required="">
+                        <input type="test"
+                               id="email"
+                               name="email"
+                               placeholder="<?=Loc::getMessage('CONTACT_BLOCK_INPUT_EMAIL')?>"
+                        >
                     </div>
                     <div class="form-group">
-                        <textarea id="message" name="message" placeholder="Ваше сообщение" required=""></textarea>
+                        <textarea id="message"
+                                  name="message"
+                                  placeholder="<?=Loc::getMessage('CONTACT_BLOCK_INPUT_MESSAGE')?>"></textarea>
                     </div>
-                    <button type="submit" class="btn">Отправить</button>
+                    <button type="submit" class="btn">
+                        <?=Loc::getMessage('CONTACT_BLOCK_BTN')?>
+                    </button>
                 </form>
             </div>
         </div>

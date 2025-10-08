@@ -262,7 +262,7 @@ $APPLICATION->IncludeComponent(
         "AREA_FILE_SHOW" => "file",
         "AREA_FILE_SUFFIX" => "inc",
         "EDIT_TEMPLATE" => "standard.php",
-        "PATH" => "/local/include/contactForm.php"
+        "PATH" => "/local/include/separator.php"
     )
 );
 ?>

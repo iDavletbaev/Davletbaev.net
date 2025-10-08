@@ -691,6 +691,9 @@ section {
         padding: 10px 0 10px;
     }
 }
+.separator {
+    padding: 20px 0;
+}
 /* Кнопка "Наверх" */
 #back-to-top {
     position: fixed;

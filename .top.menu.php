@@ -7,6 +7,13 @@ $aMenuLinks = Array(
 		Array(),
 		""
 	),
+    Array(
+        "Кейсы",
+        "/#cases",
+        Array(),
+        Array(),
+        ""
+    ),
 	Array(
 		"Сертификаты",
 		"/#certificates",
@@ -14,18 +21,4 @@ $aMenuLinks = Array(
 		Array(),
 		""
 	),
-	Array(
-		"Кейсы",
-		"/#cases",
-		Array(),
-		Array(),
-		""
-	),
-	Array(
-		"Контакты",
-		"/#contact",
-		Array(),
-		Array(),
-		""
-	)
 );

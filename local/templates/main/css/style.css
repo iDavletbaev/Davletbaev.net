@@ -175,6 +175,9 @@ section {
 }
 
 /* Сертификаты */
+.certificates-section {
+    background-color: var(--secondary-color);
+}
 .certificates-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -186,7 +189,7 @@ section {
     position: relative;
     border-radius: 10px;
     overflow: hidden;
-    height: 360px;
+    /*height: 260px;*/
     transition: transform 0.3s;
 }
 
@@ -227,7 +230,7 @@ section {
 
 /* Типовые задачи */
 .tasks-section {
-    background-color: var(--secondary-color);
+    /*background-color: var(--secondary-color);*/
 }
 
 .tasks-grid {
@@ -247,6 +250,7 @@ section {
 
 .task-card:hover {
     transform: translateY(-10px);
+    background-color: var(--secondary-color);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
@@ -568,7 +572,7 @@ section {
         font-size: 2.2rem;
     }
     .certificate-mp-card {
-        height: 300px;
+        /*height: 300px;*/
     }
 }
 
@@ -658,7 +662,8 @@ section {
     }
 
     .certificates-grid {
-        grid-template-columns: 1fr;
+        /*grid-template-columns: 1fr;*/
+        rid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 }
 

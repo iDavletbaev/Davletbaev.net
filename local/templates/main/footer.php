@@ -2,6 +2,7 @@
 global $APPLICATION;
 if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 
+use Bitrix\Main\Localization\Loc;
 use Bitrix\Main\Page\Asset;
 
 Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/main.js");
@@ -67,11 +68,18 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/main.js");
                             <?=$GLOBALS['CONTACTS']['LinkedIn']['UF_DAV_NAME']?>
                         </a>
                     </li>
+                    <li>
+                        <i class="fab fa-github" aria-hidden="true"></i>
+                        <a href="<?=$GLOBALS['CONTACTS']['GitHub']['UF_DAV_VALUE']?>"
+                           target="_blank">
+                            <?=$GLOBALS['CONTACTS']['GitHub']['UF_DAV_NAME']?>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; <?= date('Y') ?>  <?=$GLOBALS['CONTACTS']['FullName']['UF_DAV_VALUE']?>. Все права защищены.</p>
+            <p>&copy; <?= date('Y') ?>  <?=$GLOBALS['CONTACTS']['FullName']['UF_DAV_VALUE']?>. <?= Loc::getMessage('RIGHTS')?></p>
         </div>
     </div>
 </footer>

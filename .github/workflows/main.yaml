@@ -5,6 +5,12 @@ on:
     branches:
       - develop
 
+# Добавляем явные разрешения для workflow
+permissions:
+  contents: read
+  pull-requests: write
+  issues: write
+
 jobs:
   deploy:
     if: github.event.pull_request.merged == true
@@ -33,11 +39,6 @@ jobs:
             git fetch origin develop
             git checkout develop
             git pull origin develop
-
-            # Добавьте здесь дополнительные команды если нужно (очистка кеша, обновление зависимостей и т.д.)
-            # например:
-            # php composer.phar install --no-dev
-            # php bitrix:clear:cache
           EOF
 
       - name: Notify about successful deployment

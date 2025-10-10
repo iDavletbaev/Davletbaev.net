@@ -10,3 +10,4 @@ robots.txt
 
 *.log
 *log.txt
+/test.php

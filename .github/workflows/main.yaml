@@ -5,6 +5,11 @@ on:
     branches:
       - develop
 
+permissions:
+  contents: read
+  pull-requests: write
+  issues: write
+
 jobs:
   deploy:
     if: github.event.pull_request.merged == true
@@ -16,28 +21,40 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Setup SSH
-        uses: webfactory/ssh-agent@v0.8.0
-        with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-
-      - name: Add known hosts
+      - name: Configure SSH
         run: |
           mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
           ssh-keyscan -H ${{ secrets.SERVER_HOST }} >> ~/.ssh/known_hosts
 
       - name: Deploy to dev server
         run: |
-          ssh ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} << 'EOF'
+          ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=no ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} << 'EOF'
+            # Обновляем путь к Git для CentOS
+            export PATH=$PATH:/usr/bin
+
+            # Переходим в директорию проекта
             cd ${{ secrets.PROJECT_PATH }}
+
+            # Проверяем наличие изменений и сбрасываем локальные изменения если есть
+            git reset --hard
+            git clean -fd
+
+            # Получаем и применяем изменения
             git fetch origin develop
             git checkout develop
             git pull origin develop
 
-            # Добавьте здесь дополнительные команды если нужно (очистка кеша, обновление зависимостей и т.д.)
-            # например:
-            # php composer.phar install --no-dev
-            # php bitrix:clear:cache
+            # Установка прав на файлы (если необходимо)
+            chmod -R 755 .
+            find . -type f -exec chmod 644 {} \;
+
+            # Если используется composer
+            # /usr/local/bin/composer install --no-dev
+
+            # Если нужно очистить кеш Битрикс
+            # php -f bitrix/modules/main/tools/cache.php
           EOF
 
       - name: Notify about successful deployment

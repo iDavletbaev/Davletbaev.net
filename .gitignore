@@ -1,17 +1,11 @@
 .idea/*
 .DS_Store
-
 robots.txt
-
 /bitrix*
-
 /upload/*
-
 .htaccess
 /local/logs/*
 /local/vendor/*
-/local/composer.lock
-/local/vendor/
 /local/composer.lock
 
 *.log

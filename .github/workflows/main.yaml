@@ -29,9 +29,9 @@ jobs:
 
       - name: Deploy to dev server
         run: |
-          ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=no ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} << 'EOF'
+            ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} << 'EOF'
             # Обновляем путь к Git для CentOS
-            export PATH=$PATH:/usr/bin
+            # export PATH=$PATH:/usr/bin
 
             # Переходим в директорию проекта
             cd ${{ secrets.PROJECT_PATH }}
@@ -66,7 +66,7 @@ jobs:
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: '✅ Изменения успешно развернуты на dev сервере'
+              body: 'Изменения успешно развернуты на dev сервере'
             })
 
       - name: Notify about deployment failure
@@ -79,7 +79,7 @@ jobs:
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: '❌ Ошибка при развертывании на dev сервере'
+              body: 'Ошибка при развертывании на dev сервере'
             })
 
   check_conflicts:
@@ -110,5 +110,5 @@ jobs:
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: '⚠️ Обнаружены конфликты слияния. Пожалуйста, разрешите конфликты перед мерджем.'
+              body: 'Обнаружены конфликты слияния. Пожалуйста, разрешите конфликты перед мерджем.'
             })

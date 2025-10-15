@@ -130,7 +130,6 @@ body {
     width: 100%;
 }
 
-/* Бургер меню */
 .hamburger {
     display: none;
     cursor: pointer;
@@ -191,6 +190,7 @@ section {
     overflow: hidden;
     /*height: 260px;*/
     transition: transform 0.3s;
+    border-bottom: 3px solid transparent;
 }
 
 .certificate-mp-card img {
@@ -201,7 +201,7 @@ section {
 }
 
 .certificate-mp-card:hover {
-    transform: translateY(-10px);
+    border-bottom: 3px solid var(--primary-color);
 }
 
 .certificate-mp-card:hover img {
@@ -216,12 +216,13 @@ section {
     background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
     padding: 20px;
     color: white;
-    transform: translateY(100%);
+    /*transform: translateY(100%);*/
     transition: transform 0.3s;
 }
 
 .certificate-card:hover .certificate-overlay {
     transform: translateY(0);
+    /*border-buttom 3px transperent*/
 }
 
 .text-center {
@@ -241,17 +242,18 @@ section {
 }
 
 .task-card {
-    background-color: var(--dark-color);
+    background-color: var(--secondary-color);
     padding: 30px;
     border-radius: 10px;
     text-align: center;
     transition: all 0.3s;
+    border-bottom: 3px solid transparent;
 }
 
 .task-card:hover {
-    transform: translateY(-10px);
-    background-color: var(--secondary-color);
+    /*transform: translateY(-10px);*/
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    border-bottom: 3px solid var(--primary-color);
 }
 
 .task-icon {
@@ -574,6 +576,10 @@ section {
     .certificate-mp-card {
         /*height: 300px;*/
     }
+    .cases-page, .page-content {
+         padding: 30px 0;
+     }
+
 }
 
 @media (max-width: 768px) {
@@ -663,7 +669,7 @@ section {
 
     .certificates-grid {
         /*grid-template-columns: 1fr;*/
-        rid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 }
 
@@ -690,10 +696,37 @@ section {
     }
 
     .modal-content {
-        padding: 30px 20px;
+        padding: 10px;
+        width: 95%;
+    }
+    .modal-case-content {
+        gap: 10px;
+    }
+    ul {
+        padding: 0 15px;
+    }
+    .close-modal {
+        z-index: 999;
+        color: var(--secondary-color);
+        border-radius: 5px;
+        width: 25px;
+        height: 25px;
     }
     .hero {
         padding: 10px 0 10px;
+    }
+
+    .hero-text {
+        margin-bottom: 0;
+    }
+    .social-links {
+        margin-bottom: 0;
+    }
+    .hero-image {
+        margin-bottom: 30px;
+    }
+    .cases-page, .page-content {
+        padding: 20px 0;
     }
 }
 .separator {

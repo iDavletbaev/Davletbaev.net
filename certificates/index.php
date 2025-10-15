@@ -121,8 +121,8 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/certificates.js");
             <div class="certificate-details">
                 <h3 id="modal-cert-title"></h3>
                 <div class="cert-meta">
-                    <span id="modal-cert-date"></span>
                     <span id="modal-cert-issuer"></span>
+                    <span id="modal-cert-date"></span>
                 </div>
                 <a href="#" class="btn" id="download-cert">Скачать сертификат</a>
             </div>

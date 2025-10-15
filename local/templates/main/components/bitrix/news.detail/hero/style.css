@@ -266,9 +266,8 @@
     .photo-container {
         margin: 40px auto 0;
     }
-
-    .hero-text {
-        margin-bottom: 50px;
+    .hero-content {
+        gap: 10px;
     }
 }
 

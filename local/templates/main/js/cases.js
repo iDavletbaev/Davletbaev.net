@@ -101,7 +101,6 @@ document.addEventListener('DOMContentLoaded', function () {
             <div class="modal-case-content">
                 <div class="case-slider">
                     <img src="${data.images[0].SRC}" alt="${data.title}" class="active-slide" id="modal-case-image">
-                    <div class="case-thumbnails" id="case-thumbnails"></div>
                 </div>
                 <div class="case-details">
                     <h2 id="modal-case-title">${data.title}</h2>
@@ -166,12 +165,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 thumb.src = img.SRC;
                 thumb.alt = img.DESCRIPTION;
                 if (index === 0) thumb.classList.add('active');
-                thumb.addEventListener('click', () => {
-                    document.getElementById('modal-case-image').src = img.SRC;
-                    document.querySelectorAll('.case-thumbnails img').forEach(t => t.classList.remove('active'));
-                    thumb.classList.add('active');
-                });
-                thumbnailsContainer.appendChild(thumb);
+                
             });
         }
 

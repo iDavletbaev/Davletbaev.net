@@ -1,24 +1,24 @@
 <?php
 $aMenuLinks = Array(
-    Array(
-        "Навыки",
-        "/#skills",
-        Array(),
-        Array(),
-        ""
-    ),
-    Array(
-        "Кейсы",
-        "/cases/",
-        Array(),
-        Array(),
-        ""
-    ),
-    Array(
-        "Сертификаты",
-        "/certificates/",
-        Array(),
-        Array(),
-        ""
-    ),
+	Array(
+		"Навыки",
+		"/#skills",
+		Array(),
+		Array(),
+		""
+	),
+	Array(
+		"Сертификаты",
+		"/certificates/",
+		Array(),
+		Array(),
+		""
+	),
+	Array(
+		"Кейсы",
+		"/cases/",
+		Array(),
+		Array(),
+		""
+	),
 );

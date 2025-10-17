@@ -577,6 +577,13 @@ section {
 }
 
 @media (max-width: 768px) {
+
+    .close-modal {
+        top: 0;
+        right: 15px;
+        z-index: 500;
+        color: var(--primary-color)
+    }
     .hamburger {
         display: block;
     }
@@ -690,10 +697,18 @@ section {
     }
 
     .modal-content {
-        padding: 30px 20px;
+        padding: 10px;
+        width: 95%;
     }
     .hero {
         padding: 10px 0 10px;
+    }
+
+    .close-modal {
+        top: 0;
+        right: 15px;
+        z-index: 500;
+        color: var(--primary-color)
     }
 }
 .separator {

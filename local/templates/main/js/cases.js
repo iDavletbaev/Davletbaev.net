@@ -166,12 +166,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 thumb.src = img.SRC;
                 thumb.alt = img.DESCRIPTION;
                 if (index === 0) thumb.classList.add('active');
-                thumb.addEventListener('click', () => {
-                    document.getElementById('modal-case-image').src = img.SRC;
-                    document.querySelectorAll('.case-thumbnails img').forEach(t => t.classList.remove('active'));
-                    thumb.classList.add('active');
-                });
-                thumbnailsContainer.appendChild(thumb);
+                
             });
         }
 

@@ -8,7 +8,6 @@ use Bitrix\Main\Page\Asset;
 Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/main.js");
 ?>
 
-<!-- Подвал -->
 <footer class="footer">
     <div class="container">
         <div class="footer-content">
@@ -17,7 +16,7 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/main.js");
                     <?=$GLOBALS['CONTACTS']['Name']['UF_DAV_VALUE']?>
                     <span><?=$GLOBALS['CONTACTS']['LastName']['UF_DAV_VALUE']?></span>
                     </a>
-                <p>Веб-разработчик</p>
+                <p>Fullstack-разработчик с экспертизой в 1С-Битрикс</p>
             </div>
             <?php
             if ($APPLICATION->GetCurPage() == '/') {
@@ -84,7 +83,6 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/main.js");
     </div>
 </footer>
 
-<!-- Модальное окно (скрыто по умолчанию) -->
 <div id="modal" class="modal">
     <div class="modal-content">
         <span class="close-modal">&times;</span>
@@ -93,7 +91,6 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/main.js");
     </div>
 </div>
 
-<!-- Кнопка "Наверх" -->
 <button id="back-to-top" aria-label="Вернуться к началу страницы">
     <svg id="progress-circle" width="60" height="60" viewBox="0 0 60 60">
         <circle class="bg" cx="30" cy="30" r="28"/>

@@ -282,3 +282,8 @@
         margin-top: -15px;
     }
 }
+.hero-social-icons svg {
+    width: 35px;
+    height: 35px;
+    fill: var(--primary-color);
+}

@@ -39,7 +39,10 @@ $this->setFrameMode(true);
                              data-category="<?= $arItem['SECTION']['CODE'] ?>"
                         >
                             <div class="certificate-image">
-                                <img src="<?= $arItem['DETAIL_PICTURE']['SRC'] ?>" alt="<?= $arItem['NAME'] ?>">
+                                <img src="<?= $arItem['PREVIEW_PICTURE']['SRC'] ?>"
+                                 alt="<?= $arItem['NAME'] ?>"
+                                 data-src="<?=$arItem['DETAIL_PICTURE']['SRC'] ?>"
+                                 >
                                 <div class="certificate-overlay">
                                     <button class="view-btn" data-cert-id="<?= $arItem['ID'] ?>">
                                         <i class="fas fa-expand"></i>

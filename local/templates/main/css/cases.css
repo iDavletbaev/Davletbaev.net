@@ -207,6 +207,12 @@
     color: var(--primary-color);
 }
 
+.case-details h3 {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: var(--primary-color);
+}
+
 .case-meta-modal {
     display: flex;
     gap: 20px;

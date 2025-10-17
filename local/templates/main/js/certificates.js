@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.view-btn').forEach(button => {
         button.addEventListener('click', function() {
             const certCard = this.closest('.certificate-card');
-            const certImg = certCard.querySelector('img').src;
+            const certImg = certCard.querySelector('img').dataset.src;
             const certTitle = certCard.querySelector('h3').textContent;
             const certMeta = certCard.querySelectorAll('.certificate-meta span');
 

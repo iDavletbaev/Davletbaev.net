@@ -130,9 +130,12 @@ document.addEventListener('DOMContentLoaded', function () {
         // Ссылка
         const linkContainer = document.getElementById('case-link');
         if (data.url.link) {
-            linkContainer.innerHTML = `<a href="${data.url.link}" class="btn" id="case-visit-btn" target="_blank">
+            linkContainer.innerHTML = `<!—noindex—><a 
+            rel="nofollow"
+            href="${data.url.link}" 
+            class="btn" id="case-visit-btn" target="_blank">
             ${data.url.description}
-            </a>`
+            </a><!—/noindex—>`
         }
 
         // Заполняем технологии
@@ -166,12 +169,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 thumb.src = img.SRC;
                 thumb.alt = img.DESCRIPTION;
                 if (index === 0) thumb.classList.add('active');
-                thumb.addEventListener('click', () => {
+                /*thumb.addEventListener('click', () => {
                     document.getElementById('modal-case-image').src = img.SRC;
                     document.querySelectorAll('.case-thumbnails img').forEach(t => t.classList.remove('active'));
                     thumb.classList.add('active');
                 });
-                thumbnailsContainer.appendChild(thumb);
+                thumbnailsContainer.appendChild(thumb);*/
             });
         }
 

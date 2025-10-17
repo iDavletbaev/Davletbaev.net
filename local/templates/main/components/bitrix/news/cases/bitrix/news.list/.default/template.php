@@ -41,6 +41,7 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/cases.js");
 
         <div class="cases-grid">
             <?php foreach ($arResult['ITEMS'] as $arItem) { ?>
+                <?php //d($arItem) ?>
             <article class="case-card" data-category="<?=$arItem['IBLOCK_SECTION_ID']?>" data-case="<?=$arItem['ID']?>">
                 <div class="case-card-image">
                     <?php if (isset($arItem['PREVIEW_PICTURE']['SRC'])) { ?>
@@ -61,9 +62,9 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/cases.js");
                 <div class="case-card-content">
                     <h3 class="case-title"><?=$arItem['NAME']?></h3>
 
-                    <?php if (strlen($arItem['~PREVIEW_TEXT']) > 0) { ?>
-                        <p><?=$arItem['~PREVIEW_TEXT']?></p>
-                    <?php }?>
+                    <?php if (isset($arItem['PROPERTIES']['ANOUNCE']['~VALUE']['TEXT'])) { ?>
+                        <p><?=$arItem['PROPERTIES']['ANOUNCE']['~VALUE']['TEXT']?></p>
+                    <?php } ?>
 
                     <button class="case-read-more">
                         <?=Loc::getMessage('CASE_LIST_MORE_BTN')?>

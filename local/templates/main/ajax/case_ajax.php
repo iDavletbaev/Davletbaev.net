@@ -25,6 +25,7 @@ while ($casePropertyT = $caseProperty->fetch()) {
             $props[$casePropertyT['CODE']]['NAME'] = $casePropertyT['NAME'];
             $props[$casePropertyT['CODE']]['VALUE'] = $casePropertyT['VALUE'];
             $props[$casePropertyT['CODE']]['DESCRIPTION'] = $casePropertyT['DESCRIPTION'];
+            $props[$casePropertyT['CODE']]['ANOUNCE'] = $casePropertyT['ANOUNCE'];
         }
         if ($casePropertyT['MULTIPLE'] == 'Y') {
             $props[$casePropertyT['CODE']]['ID'] = $casePropertyT['ID'];
@@ -69,18 +70,19 @@ while ($casePropertyT = $caseProperty->fetch()) {
     }
 }
 
+
 $case = array(
     'title' => $caseData['NAME'],
     'duration' => ($props['DURATION']['VALUE']) ? '<span id="modal-case-duration">'.$props['DURATION']['VALUE'].'</span>' : '',
     'category' => $section['NAME'],
     'description' => $caseData['DETAIL_TEXT'],
+    'results' => $caseData['PREVIEW_TEXT'],
     'url' => array(
         'link' => (isset($props['URL']['VALUE'])) ? $props['URL']['VALUE'] : '',
         'description' => (isset($props['URL']['DESCRIPTION'])) ? $props['URL']['DESCRIPTION'] : '',
     ),
     'tech' => $props['TECH']['V'],
     'images' => $caseData['IMAGES'],
-    'results' => $caseData['PREVIEW_TEXT'],
 );
 
 echo json_encode($case);

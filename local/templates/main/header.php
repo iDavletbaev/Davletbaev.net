@@ -24,6 +24,11 @@ global $USER;
     <noscript><div><img src="https://mc.yandex.ru/watch/99600287" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!-- /Yandex.Metrika counter -->
 
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
+    <link rel="manifest" href="/site.webmanifest">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php $APPLICATION->ShowTitle() ?></title>
 

@@ -1,4 +1,4 @@
-<? if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
+<?php if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 /** @var array $arParams */
 /** @var array $arResult ['ITEMS']$arResult */
 /** @global CMain $APPLICATION */
@@ -39,9 +39,11 @@ $this->setFrameMode(true);
                              data-category="<?= $arItem['SECTION']['CODE'] ?>"
                         >
                             <div class="certificate-image">
+
                                 <img src="<?= $arItem['PREVIEW_PICTURE']['SRC'] ?>" 
                                 data-src='<?= $arItem['DETAIL_PICTURE']['SRC'] ?>' 
                                 alt="<?= $arItem['NAME'] ?>">
+
                                 <div class="certificate-overlay">
                                     <button class="view-btn" data-cert-id="<?= $arItem['ID'] ?>">
                                         <i class="fas fa-expand"></i>
@@ -51,11 +53,11 @@ $this->setFrameMode(true);
                             <div class="certificate-info">
                                 <h3><?= $arItem['NAME'] ?></h3>
                                 <div class="certificate-meta">
+                                <span class="cert-issuer">
+                                    <i class="fas fa-award"></i> <?= $arItem['SECTION']['NAME'] ?>
+                                </span>
                                 <span class="cert-date">
                                     <i class="far fa-calendar"></i> <?= $arItem['DISPLAY_PROPERTIES']['YEAR']['VALUE'] ?>
-                                </span>
-                                    <span class="cert-issuer">
-                                    <i class="fas fa-award"></i> <?= $arItem['SECTION']['NAME'] ?>
                                 </span>
                                 </div>
                             </div>

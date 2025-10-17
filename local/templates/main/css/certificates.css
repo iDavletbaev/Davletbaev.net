@@ -176,7 +176,7 @@
 
 /* Модальное окно сертификата */
 .modal-certificate {
-    display: grid;
+    display: block;
     grid-template-columns: 1fr 300px;
     gap: 30px;
 }
@@ -199,11 +199,14 @@
 }
 
 .cert-meta {
-    display: flex;
-    flex-direction: column;
+    /*display: flex;*/
+    /*flex-direction: column;*/
     gap: 10px;
     margin-bottom: 30px;
     color: var(--gray-color);
+}
+.cert-meta span {
+    margin-right: 10px;
 }
 
 #download-cert {

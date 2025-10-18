@@ -67,11 +67,11 @@ $APPLICATION->IncludeComponent(
 ); ?> <?php
 // Блок с видами деятельности
 $APPLICATION->IncludeComponent(
-	"bitrix:news.list",
-	"main-page-tasks",
-	array(
+	"bitrix:news.list", 
+	"main-page-tasks", 
+	[
 		"ACTIVE_DATE_FORMAT" => "",
-		"ADD_SECTIONS_CHAIN" => "Y",
+		"ADD_SECTIONS_CHAIN" => "N",
 		"AJAX_MODE" => "N",
 		"AJAX_OPTION_ADDITIONAL" => "",
 		"AJAX_OPTION_HISTORY" => "N",
@@ -89,15 +89,15 @@ $APPLICATION->IncludeComponent(
 		"DISPLAY_PICTURE" => "Y",
 		"DISPLAY_PREVIEW_TEXT" => "Y",
 		"DISPLAY_TOP_PAGER" => "N",
-		"FIELD_CODE" => array(
+		"FIELD_CODE" => [
 			0 => "",
 			1 => "",
-		),
+		],
 		"FILTER_NAME" => "",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
 		"IBLOCK_ID" => "4",
 		"IBLOCK_TYPE" => "lists",
-		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
+		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
 		"INCLUDE_SUBSECTIONS" => "Y",
 		"MEDIA_PROPERTY" => "",
 		"MESSAGE_404" => "",
@@ -112,17 +112,17 @@ $APPLICATION->IncludeComponent(
 		"PARENT_SECTION" => "",
 		"PARENT_SECTION_CODE" => "",
 		"PREVIEW_TRUNCATE_LEN" => "",
-		"PROPERTY_CODE" => array(
+		"PROPERTY_CODE" => [
 			0 => "FA_ICON",
 			1 => "",
-		),
+		],
 		"SEARCH_PAGE" => "/search/",
-		"SET_BROWSER_TITLE" => "Y",
+		"SET_BROWSER_TITLE" => "N",
 		"SET_LAST_MODIFIED" => "N",
-		"SET_META_DESCRIPTION" => "Y",
-		"SET_META_KEYWORDS" => "Y",
+		"SET_META_DESCRIPTION" => "N",
+		"SET_META_KEYWORDS" => "N",
 		"SET_STATUS_404" => "N",
-		"SET_TITLE" => "Y",
+		"SET_TITLE" => "N",
 		"SHOW_404" => "N",
 		"SLIDER_PROPERTY" => "",
 		"SORT_BY1" => "SORT",
@@ -134,7 +134,7 @@ $APPLICATION->IncludeComponent(
 		"USE_RATING" => "N",
 		"USE_SHARE" => "N",
 		"COMPONENT_TEMPLATE" => "main-page-tasks"
-	),
+	],
 	false
 );
 ?>

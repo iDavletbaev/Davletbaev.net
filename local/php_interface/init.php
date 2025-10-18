@@ -1,4 +1,6 @@
 <?php
+
+use Bitrix\Highloadblock\HighloadBlockTable;
 use Bitrix\Main\Loader;
 
 if (file_exists($_SERVER["DOCUMENT_ROOT"] . "/local/vendor/autoload.php")) {
@@ -6,15 +8,15 @@ if (file_exists($_SERVER["DOCUMENT_ROOT"] . "/local/vendor/autoload.php")) {
 }
 
 Loader::includeModule("highloadblock");
-$hlblock = \Bitrix\Highloadblock\HighloadBlockTable::getById(1)->fetch();
+$hlblock = HighloadBlockTable::getById(1)->fetch();
 
 if ($hlblock) {
-    $entity = \Bitrix\Highloadblock\HighloadBlockTable::compileEntity($hlblock);
+    $entity = HighloadBlockTable::compileEntity($hlblock);
     $entityDataClass = $entity->getDataClass();
 
     $result = $entityDataClass::getList(array(
         "select" => array("*"),
-        "order" => array("ID"=>"DESC"),
+        "order" => array("ID" => "DESC"),
     ));
 
     while ($arRow = $result->Fetch()) {

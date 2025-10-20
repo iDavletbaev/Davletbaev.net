@@ -51,12 +51,17 @@ document.addEventListener('DOMContentLoaded', function() {
             modalDate.textContent = certMeta[0].textContent;
             modalIssuer.textContent = certMeta[1].textContent;
 
-            console.debug('certLinkTitle', certCard.querySelector('img').dataset)
             // Устанавливаем ссылку для просмотра оригинала сертификата
             const imgPath = certImg.split('/').pop();
-            downloadBtn.href = certLink;
-            downloadBtn.target = '_blank';
-            downloadBtn.textContent = certLinkTitle;
+
+            console.debug('certLink', certLink)
+            if (certLink) {
+                downloadBtn.href = certLink;
+                downloadBtn.target = '_blank';
+                downloadBtn.textContent = certLinkTitle;
+            } else {
+                downloadBtn.style.display = 'none';
+            }
 
             // Показываем модальное окно
             modal.style.display = 'block';

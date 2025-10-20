@@ -25,7 +25,7 @@ Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/cases.css");
             <div class="article-content">
             <div class="article-header">
                 <div class="article-meta">
-                    <span class="article-category">В
+                    <span class="article-category">
                     <?=$arResult['SECTIOM']['NAME']?></span>
                     <?php if ($arResult['DISPLAY_PROPERTIES']['DURATION']['DISPLAY_VALUE']) { ?>
                     <span class="article-date"><i class="far fa-calendar"></i>

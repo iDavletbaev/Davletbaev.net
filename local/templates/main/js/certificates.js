@@ -41,6 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const certCard = this.closest('.certificate-card');
             const certImg = certCard.querySelector('img').dataset.src;
             const certLink = certCard.querySelector('img').dataset.link;
+            const certLinkTitle = certCard.querySelector('img').dataset.linktitle;
             const certTitle = certCard.querySelector('h3').textContent;
             const certMeta = certCard.querySelectorAll('.certificate-meta span');
 
@@ -50,11 +51,12 @@ document.addEventListener('DOMContentLoaded', function() {
             modalDate.textContent = certMeta[0].textContent;
             modalIssuer.textContent = certMeta[1].textContent;
 
+            console.debug('certLinkTitle', certCard.querySelector('img').dataset)
             // Устанавливаем ссылку для просмотра оригинала сертификата
             const imgPath = certImg.split('/').pop();
             downloadBtn.href = certLink;
             downloadBtn.target = '_blank';
-            downloadBtn.textContent = 'sdvdsvd';
+            downloadBtn.textContent = certLinkTitle;
 
             // Показываем модальное окно
             modal.style.display = 'block';

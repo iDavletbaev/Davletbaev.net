@@ -1,6 +1,7 @@
 <?php if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
     die();
 }
+use Bitrix\Main\Localization\Loc;
 /** @var array $arParams */
 /** @var array $arResult ['ITEMS']$arResult */
 /** @global CMain $APPLICATION */
@@ -44,6 +45,7 @@ $this->setFrameMode(true);
                                 <img src="<?= $arItem['PREVIEW_PICTURE']['SRC'] ?>" 
                                 data-src='<?= $arItem['DETAIL_PICTURE']['SRC'] ?>' 
                                 data-link='<?= $arItem['~DETAIL_TEXT'] ?>'
+                                data-linktitle='<?= Loc::getMessage("CERT_BTN_TITLE") ?>'
                                 alt="<?= $arItem['NAME'] ?>">
 
                                 <div class="certificate-overlay">

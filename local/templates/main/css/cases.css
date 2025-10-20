@@ -116,7 +116,7 @@
     line-height: 1.6;
 }
 
-.case-read-more {
+.case-read-more, .case-detail {
     background: transparent;
     border: none;
     color: var(--primary-color);
@@ -126,9 +126,12 @@
     align-items: center;
     gap: 5px;
     padding: 0;
+    text-decoration: none;
 }
-
-.case-read-more i {
+.case-detail {
+    margin-top: 10px;
+}
+.case-read-more i, .case-detail i {
     transition: transform 0.3s;
 }
 
@@ -204,6 +207,9 @@
 .case-details h2 {
     font-size: 2rem;
     margin-bottom: 15px;
+    color: var(--primary-color);
+}
+.article-content h3 {
     color: var(--primary-color);
 }
 
@@ -294,7 +300,6 @@
     .cases-grid {
         grid-template-columns: 1fr;
     }
-
     .case-meta, .case-meta-modal {
         flex-direction: column;
         gap: 5px;
@@ -338,4 +343,103 @@
 
 @keyframes spin {
     to { transform: rotate(360deg); }
+}
+
+.cases-detail-page {
+    padding: 80px 0;
+    background-color: var(--secondary-color);
+}
+.cases-detail-page h1 {
+    margin-top: 15px;
+    color: var(--primary-color);
+}
+
+.article-category {
+    background: var(--primary-color);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+.article-title {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    line-height: 1.3;
+}
+.article-image {
+    margin: 40px 0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.article-image img {
+    width: 100%;
+    display: block;
+}
+
+.image-caption {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: var(--gray-color);
+}
+
+.article-content {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+.article-content h2 {
+    font-size: 1.8rem;
+    margin: 40px 0 20px;
+    color: var(--primary-color);
+}
+
+.article-content ul, .article-content ol {
+    margin-bottom: 20px;
+    margin-left: 20px;
+    padding-left: 20px;
+}
+
+.article-content li {
+    margin-bottom: 10px;
+}
+
+.code-example {
+    background: var(--dark-color);
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    overflow-x: auto;
+}
+
+.code-example pre {
+    margin: 0;
+}
+
+.article-footer {
+    max-width: 800px;
+    margin: 50px auto 0;
+    padding-top: 30px;
+    border-top: 1px solid var(--dark-gray);
+}
+.article-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+.article-tags h3 {
+    width: 100%;
+}
+.tag {
+    background: var(--primary-color);
+    color: var(--light-color);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: all 0.3s;
 }

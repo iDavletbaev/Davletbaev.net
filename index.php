@@ -256,7 +256,6 @@ $APPLICATION->IncludeComponent(
 ?>
 
 <?php
-// Contacts & form block
 $APPLICATION->IncludeComponent(
     "bitrix:main.include",
     "",

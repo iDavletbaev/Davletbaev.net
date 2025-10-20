@@ -1,5 +1,6 @@
 <?php
+
 $sSectionName = "Кейсы";
-$arDirProperties = Array(
+$arDirProperties = array(
 
 );

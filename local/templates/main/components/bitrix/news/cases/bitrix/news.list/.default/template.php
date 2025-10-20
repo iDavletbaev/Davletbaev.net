@@ -1,9 +1,11 @@
-<?php use Bitrix\Main\Localization\Loc;
+<?php
 
-if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) {
+use Bitrix\Main\Localization\Loc;
+
+if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
     die();
 }
-use Bitrix\Main\Page\Asset;
+
 /** @var array $arParams */
 /** @var array $arResult */
 /** @global CMain $APPLICATION */
@@ -16,66 +18,63 @@ use Bitrix\Main\Page\Asset;
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
-
-Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/cases.css");
-Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/cases.js");
 ?>
-<!--<link rel="stylesheet" href="/local/templates/main/css/cases.css">
-<script src="/local/templates/main/js/cases.js"></script>-->
 
 <main class="cases-page">
     <div class="container">
         <div class="page-header">
-            <h1 class="page-title">Мои кейсы</h1>
-            <p class="page-subtitle">Реализованные проекты и успешные решения</p>
+            <h1 class="page-title"><?=$arResult['NAME']?></h1>
+            <p class="page-subtitle"><?=$arResult['DESCRIPTION']?></p>
         </div>
 
         <div class="cases-categories">
             <button class="category-btn active" data-category="all">Все</button>
             <?php foreach ($arResult['SECTIONS'] as $arSection) { ?>
-                <button class="category-btn" id="category_filter_<?=$arSection['ID']?>" data-category="<?=$arSection['ID']?>">
-                    <?=$arSection['NAME']?>
+                <button class="category-btn" id="category_filter_<?= $arSection['ID'] ?>"
+                        data-category="<?= $arSection['ID'] ?>">
+                    <?= $arSection['NAME'] ?>
                 </button>
             <?php } ?>
         </div>
 
         <div class="cases-grid">
             <?php foreach ($arResult['ITEMS'] as $arItem) { ?>
-            <article class="case-card" data-category="<?=$arItem['IBLOCK_SECTION_ID']?>" data-case="<?=$arItem['ID']?>">
-                <div class="case-card-image">
-                    <?php if (isset($arItem['PREVIEW_PICTURE']['SRC'])) { ?>
-                    <img src="<?=$arItem['PREVIEW_PICTURE']['SRC']?>"
-                         alt="<?=$arItem['PREVIEW_PICTURE']['ALT']?>"
-                    >
-                    <?php } else { ?>
-                        <img src="<?=SITE_TEMPLATE_PATH?>/images/background-pattern.png"
-                             alt="<?=$arItem['PREVIEW_PICTURE']['ALT']?>"
+                <article class="case-card" data-category="<?= $arItem['IBLOCK_SECTION_ID'] ?>"
+                         data-case="<?= $arItem['ID'] ?>">
+                    <div class="case-card-image case-read-more">
+                        <?php if (isset($arItem['PREVIEW_PICTURE']['SRC'])) { ?>
+                            <img src="<?= $arItem['PREVIEW_PICTURE']['SRC'] ?>"
+                                 alt="<?= $arItem['PREVIEW_PICTURE']['ALT'] ?>"
+                            >
+                        <?php } else { ?>
+                            <img src="<?= SITE_TEMPLATE_PATH ?>/images/background-pattern.png"
+                                 alt="<?= $arItem['PREVIEW_PICTURE']['ALT'] ?>"
+                            >
+                        <?php } ?>
+                        <span class="case-category category-btn"
+                              data-category="<?= $arItem['IBLOCK_SECTION_ID'] ?>"
                         >
-                    <?php } ?>
-                    <span class="case-category category-btn"
-                          data-category="<?=$arItem['IBLOCK_SECTION_ID']?>"
-                    >
-                        <?=$arItem['SECTION']['NAME'] ?>
+                        <?= $arItem['SECTION']['NAME'] ?>
                     </span>
-                </div>
-                <div class="case-card-content">
-                    <h3 class="case-title"><?=$arItem['NAME']?></h3>
+                    </div>
+                    <div class="case-card-content">
+                        <h3 class="case-title"><?= $arItem['NAME'] ?></h3>
 
-                    <?php if (strlen($arItem['~PREVIEW_TEXT']) > 0) { ?>
-                        <p><?=$arItem['~PREVIEW_TEXT']?></p>
-                    <?php }?>
+                        <?php if (strlen($arItem['~PREVIEW_TEXT']) > 0) { ?>
+                            <p><?= $arItem['~PREVIEW_TEXT'] ?></p>
+                        <?php } ?>
 
-                    <button class="case-read-more">
-                        <?=Loc::getMessage('CASE_LIST_MORE_BTN')?>
-                    </button>
-                </div>
-            </article>
+                        <a href="<?=$arItem['DETAIL_PAGE_URL']?>" class="case-detail">
+                            <?= Loc::getMessage('CASE_LIST_MORE_BTN') ?>
+                        </a>
+                    </div>
+                </article>
             <?php } ?>
         </div>
 
-        <?php if($arParams["DISPLAY_BOTTOM_PAGER"]):?>
-            <br /><?=$arResult["NAV_STRING"]?>
-        <?php endif;?>
+        <?php if ($arParams["DISPLAY_BOTTOM_PAGER"]) : ?>
+            <br/><?= $arResult["NAV_STRING"] ?>
+        <?php endif; ?>
     </div>
 </main>
 

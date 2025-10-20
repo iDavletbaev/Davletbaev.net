@@ -1,4 +1,6 @@
-<?php if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
+<?php if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
+    die();
+}
 /** @var array $arParams */
 /** @var array $arResult ['ITEMS']$arResult */
 /** @global CMain $APPLICATION */
@@ -22,7 +24,6 @@ $this->setFrameMode(true);
 
         <div class="content-grid">
             <div class="filter-sidebar">
-                <h3 class="filter-title">Фильтровать по категориям</h3>
                 <div class="filter-buttons">
                     <button class="filter-btn active" data-filter="all">Все</button>
                     <?php foreach ($arResult['SECTIONS'] as $section) { ?>
@@ -42,6 +43,7 @@ $this->setFrameMode(true);
 
                                 <img src="<?= $arItem['PREVIEW_PICTURE']['SRC'] ?>" 
                                 data-src='<?= $arItem['DETAIL_PICTURE']['SRC'] ?>' 
+                                data-link='<?= $arItem['~DETAIL_TEXT'] ?>'
                                 alt="<?= $arItem['NAME'] ?>">
 
                                 <div class="certificate-overlay">
@@ -57,7 +59,8 @@ $this->setFrameMode(true);
                                     <i class="fas fa-award"></i> <?= $arItem['SECTION']['NAME'] ?>
                                 </span>
                                 <span class="cert-date">
-                                    <i class="far fa-calendar"></i> <?= $arItem['DISPLAY_PROPERTIES']['YEAR']['VALUE'] ?>
+                                    <i class="far fa-calendar"></i>
+                                    <?= $arItem['DISPLAY_PROPERTIES']['YEAR']['VALUE'] ?>
                                 </span>
                                 </div>
                             </div>
@@ -66,7 +69,7 @@ $this->setFrameMode(true);
                 </div>
 
                 <div class="pagination">
-                    <?php if ($arParams["DISPLAY_BOTTOM_PAGER"]): ?>
+                    <?php if ($arParams["DISPLAY_BOTTOM_PAGER"]) : ?>
                         <br/><?= $arResult["NAV_STRING"] ?>
                     <?php endif; ?>
                 </div>

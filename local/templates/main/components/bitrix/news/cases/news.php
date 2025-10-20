@@ -16,6 +16,11 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 
+
+use Bitrix\Main\Page\Asset;
+Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/cases.css");
+Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/cases.js");
+
 if($arParams["USE_RSS"]=="Y"):
 	if(method_exists($APPLICATION, 'addheadstring'))
 		$APPLICATION->AddHeadString('<link rel="alternate" type="application/rss+xml" title="'.$arResult["FOLDER"].$arResult["URL_TEMPLATES"]["rss"].'" href="'.$arResult["FOLDER"].$arResult["URL_TEMPLATES"]["rss"].'" />');

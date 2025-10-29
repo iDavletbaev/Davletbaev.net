@@ -12,7 +12,8 @@ global $USER;
 <head>
     <meta charset="UTF-8">
 
-    <?php if ($_SERVER['SERVER_NAME'] != 'davletbaev.net') { ?>
+    <?php
+    if ($_SERVER['SERVER_NAME'] == 'davletbaev.net') { ?>
         <!-- Yandex.Metrika counter -->
         <script type="text/javascript">
             (function (m, e, t, r, i, k, a) {
@@ -43,6 +44,37 @@ global $USER;
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php $APPLICATION->ShowTitle() ?></title>
+
+    <?php if ($APPLICATION->GetCurPage() == '/') { ?>
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Ильнур Давлетбаев — Веб-разработчик 1С-Битрикс">
+        <meta property="og:description" content="Создаю современные, адаптивные и высокопроизводительные веб-приложения.
+        Более 10 лет опыта в веб-разработке.">
+        <meta property="og:url" content="https://davletbaev.net/">
+        <meta property="og:image" content="https://davletbaev.net/upload/iblock/b35/k1kv383a4291fzfg6khaftqwf2uwqazs.jpg">
+        <meta property="og:site_name" content="Ilnur Davletbaev">
+        <meta property="og:locale" content="ru_RU">
+
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Person",
+                "name": "Ильнур Давлетбаев",
+                "url": "https://davletbaev.net/",
+                "image": "https://davletbaev.net/upload/iblock/b35/k1kv383a4291fzfg6khaftqwf2uwqazs.jpg",
+                "sameAs": [
+                    "https://github.com/iDavletbaev",
+                    "https://www.linkedin.com/in/ilnur-davletbaev/",
+                    "https://t.me/IlnurD",
+                    "https://dev.1c-bitrix.ru/learning/resume.php?ID=45969232-194259"
+                ],
+                "jobTitle": "Веб-разработчик 1С-Битрикс",
+                "description": "Создаю современные, адаптивные и высокопроизводительные веб-приложения. Более 10 лет опыта в веб-разработке."
+            }
+        </script>
+    <?php } ?>
+
+    <link rel="canonical" href="https://<?=$_SERVER['SERVER_NAME']?><?=$APPLICATION->GetCurPage()?>">
 
     <?php
     $APPLICATION->ShowHead();

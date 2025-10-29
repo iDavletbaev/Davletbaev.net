@@ -60,8 +60,8 @@ $this->setFrameMode(true);
                     <div class="case-card-content">
                         <h3 class="case-title"><?= $arItem['NAME'] ?></h3>
 
-                        <?php if (strlen($arItem['~PREVIEW_TEXT']) > 0) { ?>
-                            <p><?= $arItem['~PREVIEW_TEXT'] ?></p>
+                        <?php if (strlen($arItem['PROPERTIES']['ANOUNCE']['VALUE']['TEXT']) > 0) { ?>
+                            <p><?= $arItem['PROPERTIES']['ANOUNCE']['~VALUE']['TEXT'] ?></p>
                         <?php } ?>
 
                         <a href="<?=$arItem['DETAIL_PAGE_URL']?>" class="case-detail">
